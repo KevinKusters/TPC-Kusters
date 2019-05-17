@@ -1,0 +1,9 @@
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\bin\Debug\AccesoDatos.exe.config
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\bin\Debug\AccesoDatos.exe
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\bin\Debug\AccesoDatos.pdb
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.csprojAssemblyReference.cache
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.Properties.Resources.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.csproj.GenerateResource.cache
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.exe
+D:\proyectos visual 2017\peluvet\PeluvetKusters\AccesoDatos\obj\Debug\AccesoDatos.pdb

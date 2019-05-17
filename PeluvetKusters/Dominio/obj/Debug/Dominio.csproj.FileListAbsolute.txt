@@ -1,0 +1,9 @@
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\bin\Debug\Dominio.exe.config
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\bin\Debug\Dominio.exe
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\bin\Debug\Dominio.pdb
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.Properties.Resources.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.csproj.GenerateResource.cache
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.exe
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.pdb
+D:\proyectos visual 2017\peluvet\PeluvetKusters\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
