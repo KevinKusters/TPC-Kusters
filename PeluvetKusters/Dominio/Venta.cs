@@ -11,6 +11,7 @@ namespace Dominio
         public int idVenta { get; set; }
         public int costo { get; set; }
         public DateTime fecha;
+        public bool estado { get; set;}
         Cliente client;
     }
 }

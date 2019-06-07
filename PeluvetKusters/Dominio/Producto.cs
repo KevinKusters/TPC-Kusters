@@ -12,6 +12,9 @@ namespace Dominio
         public string descripcion { get; set; }
         public string marca { get; set; }
         public decimal precio { get; set; }
-        public int stock { get; set; }        
+        public decimal precioVenta { get; set; }
+        public int porcentGanancia { get; set; }
+        public int stock { get; set; }      
+        public bool estado { get; set; }
     }
 }

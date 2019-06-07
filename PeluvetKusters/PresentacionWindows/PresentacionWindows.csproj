@@ -52,11 +52,41 @@
     <Compile Include="frmAgregarCliente.Designer.cs">
       <DependentUpon>frmAgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarMascota.Designer.cs">
+      <DependentUpon>frmAgregarMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarServicios.Designer.cs">
+      <DependentUpon>frmAgregarServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarTurno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAgregarTurno.Designer.cs">
       <DependentUpon>frmAgregarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMascota.Designer.cs">
+      <DependentUpon>frmBuscarMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.cs">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaMascotas.Designer.cs">
+      <DependentUpon>frmListaMascotas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaProductos.cs">
       <SubType>Form</SubType>
@@ -82,17 +112,17 @@
     <Compile Include="frmListarTurno.Designer.cs">
       <DependentUpon>frmListarTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalidades.Designer.cs">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListarClienteAux.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListarClienteAux.Designer.cs">
-      <DependentUpon>frmListarClienteAux.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
@@ -100,13 +130,34 @@
     <Compile Include="frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPuestos.Designer.cs">
+      <DependentUpon>frmPuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarCliente.resx">
       <DependentUpon>frmAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarMascota.resx">
+      <DependentUpon>frmAgregarMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarServicios.resx">
+      <DependentUpon>frmAgregarServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarTurno.resx">
       <DependentUpon>frmAgregarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMascota.resx">
+      <DependentUpon>frmBuscarMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaMascotas.resx">
+      <DependentUpon>frmListaMascotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaProductos.resx">
       <DependentUpon>frmListaProductos.cs</DependentUpon>
@@ -117,17 +168,20 @@
     <EmbeddedResource Include="frmListarCliente.resx">
       <DependentUpon>frmListarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarClienteAux.resx">
-      <DependentUpon>frmListarClienteAux.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmListarTurno.resx">
       <DependentUpon>frmListarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalidades.resx">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPuestos.resx">
+      <DependentUpon>frmPuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

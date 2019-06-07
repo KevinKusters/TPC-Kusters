@@ -28,112 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgbClientes = new System.Windows.Forms.DataGridView();
-            this.btnMostrarTodos = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.lblBuscador = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnDetalles = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbClientes)).BeginInit();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnVerMascotas = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgbClientes
+            // dgvClientes
             // 
-            this.dgbClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbClientes.Location = new System.Drawing.Point(234, 53);
-            this.dgbClientes.Name = "dgbClientes";
-            this.dgbClientes.Size = new System.Drawing.Size(549, 354);
-            this.dgbClientes.TabIndex = 27;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(12, 104);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.Size = new System.Drawing.Size(444, 322);
+            this.dgvClientes.TabIndex = 27;
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
-            // btnMostrarTodos
+            // lblBuscador
             // 
-            this.btnMostrarTodos.Location = new System.Drawing.Point(70, 153);
-            this.btnMostrarTodos.Name = "btnMostrarTodos";
-            this.btnMostrarTodos.Size = new System.Drawing.Size(140, 48);
-            this.btnMostrarTodos.TabIndex = 26;
-            this.btnMostrarTodos.Text = "Mostrar todos";
-            this.btnMostrarTodos.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Apellido:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(17, 56);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 24;
-            this.lblNombre.Text = "Nombre:";
+            this.lblBuscador.AutoSize = true;
+            this.lblBuscador.Location = new System.Drawing.Point(9, 60);
+            this.lblBuscador.Name = "lblBuscador";
+            this.lblBuscador.Size = new System.Drawing.Size(99, 13);
+            this.lblBuscador.TabIndex = 24;
+            this.lblBuscador.Text = "Buscar por nombre:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(26, 15);
+            this.lblCliente.Location = new System.Drawing.Point(12, 9);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(79, 25);
+            this.lblCliente.Size = new System.Drawing.Size(90, 25);
             this.lblCliente.TabIndex = 23;
-            this.lblCliente.Text = "Cliente";
+            this.lblCliente.Text = "Clientes";
             // 
-            // txtApellido
+            // txtBusqueda
             // 
-            this.txtApellido.Location = new System.Drawing.Point(70, 79);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(140, 20);
-            this.txtApellido.TabIndex = 22;
+            this.txtBusqueda.Location = new System.Drawing.Point(12, 76);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(140, 20);
+            this.txtBusqueda.TabIndex = 21;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
-            // txtNombre
+            // btnVerMascotas
             // 
-            this.txtNombre.Location = new System.Drawing.Point(70, 53);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(140, 20);
-            this.txtNombre.TabIndex = 21;
+            this.btnVerMascotas.Location = new System.Drawing.Point(12, 445);
+            this.btnVerMascotas.Name = "btnVerMascotas";
+            this.btnVerMascotas.Size = new System.Drawing.Size(105, 23);
+            this.btnVerMascotas.TabIndex = 28;
+            this.btnVerMascotas.Text = "Ver mascotas";
+            this.btnVerMascotas.UseVisualStyleBackColor = true;
+            this.btnVerMascotas.Click += new System.EventHandler(this.btnVerMascotas_Click);
             // 
-            // btnAceptar
+            // btnAgregar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(70, 115);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(140, 23);
-            this.btnAceptar.TabIndex = 20;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(12, 445);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(103, 23);
+            this.btnAgregar.TabIndex = 29;
+            this.btnAgregar.Text = "Agregar a turno";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnDetalles
+            // btnCerrar
             // 
-            this.btnDetalles.Location = new System.Drawing.Point(662, 413);
-            this.btnDetalles.Name = "btnDetalles";
-            this.btnDetalles.Size = new System.Drawing.Size(121, 23);
-            this.btnDetalles.TabIndex = 19;
-            this.btnDetalles.Text = "Detalles";
-            this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnCerrar.Location = new System.Drawing.Point(124, 445);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 30;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmListarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgbClientes);
-            this.Controls.Add(this.btnMostrarTodos);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblNombre);
+            this.ClientSize = new System.Drawing.Size(472, 480);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnVerMascotas);
+            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.lblBuscador);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnDetalles);
+            this.Controls.Add(this.txtBusqueda);
             this.Name = "frmListarCliente";
             this.Text = "frmListarCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgbClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,14 +129,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgbClientes;
-        private System.Windows.Forms.Button btnMostrarTodos;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Label lblBuscador;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnDetalles;
+        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.Button btnVerMascotas;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

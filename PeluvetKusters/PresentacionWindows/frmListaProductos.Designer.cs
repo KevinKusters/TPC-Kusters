@@ -57,6 +57,10 @@
             this.txtPrecioAgregar = new System.Windows.Forms.TextBox();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.cbxProveedores = new System.Windows.Forms.ComboBox();
+            this.txtPorcentaje = new System.Windows.Forms.TextBox();
+            this.lblPorcentaje = new System.Windows.Forms.Label();
+            this.lblGanancia = new System.Windows.Forms.Label();
+            this.txtGananciaMod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +69,12 @@
             this.dgvListaProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProd.Location = new System.Drawing.Point(244, 12);
             this.dgvListaProd.Name = "dgvListaProd";
-            this.dgvListaProd.Size = new System.Drawing.Size(435, 492);
+            this.dgvListaProd.Size = new System.Drawing.Size(435, 533);
             this.dgvListaProd.TabIndex = 0;
             // 
             // btnListarTodos
             // 
-            this.btnListarTodos.Location = new System.Drawing.Point(244, 525);
+            this.btnListarTodos.Location = new System.Drawing.Point(244, 569);
             this.btnListarTodos.Name = "btnListarTodos";
             this.btnListarTodos.Size = new System.Drawing.Size(84, 23);
             this.btnListarTodos.TabIndex = 1;
@@ -80,7 +84,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(334, 525);
+            this.btnModificar.Location = new System.Drawing.Point(334, 569);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 23);
             this.btnModificar.TabIndex = 3;
@@ -91,7 +95,7 @@
             // txtStock
             // 
             this.txtStock.Enabled = false;
-            this.txtStock.Location = new System.Drawing.Point(103, 484);
+            this.txtStock.Location = new System.Drawing.Point(102, 490);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(114, 20);
             this.txtStock.TabIndex = 38;
@@ -99,7 +103,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(103, 447);
+            this.txtPrecio.Location = new System.Drawing.Point(102, 453);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(114, 20);
             this.txtPrecio.TabIndex = 37;
@@ -107,7 +111,7 @@
             // txtIdProd
             // 
             this.txtIdProd.Enabled = false;
-            this.txtIdProd.Location = new System.Drawing.Point(103, 333);
+            this.txtIdProd.Location = new System.Drawing.Point(102, 354);
             this.txtIdProd.Name = "txtIdProd";
             this.txtIdProd.Size = new System.Drawing.Size(114, 20);
             this.txtIdProd.TabIndex = 36;
@@ -115,7 +119,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(17, 336);
+            this.lblID.Location = new System.Drawing.Point(16, 357);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(83, 13);
             this.lblID.TabIndex = 35;
@@ -123,7 +127,7 @@
             // 
             // btnCancelarMod
             // 
-            this.btnCancelarMod.Location = new System.Drawing.Point(142, 523);
+            this.btnCancelarMod.Location = new System.Drawing.Point(142, 567);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMod.TabIndex = 34;
@@ -133,7 +137,7 @@
             // 
             // btnModAceptar
             // 
-            this.btnModAceptar.Location = new System.Drawing.Point(47, 523);
+            this.btnModAceptar.Location = new System.Drawing.Point(47, 567);
             this.btnModAceptar.Name = "btnModAceptar";
             this.btnModAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnModAceptar.TabIndex = 33;
@@ -144,7 +148,7 @@
             // txtMarca
             // 
             this.txtMarca.Enabled = false;
-            this.txtMarca.Location = new System.Drawing.Point(103, 415);
+            this.txtMarca.Location = new System.Drawing.Point(102, 421);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(114, 20);
             this.txtMarca.TabIndex = 32;
@@ -152,7 +156,7 @@
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(103, 384);
+            this.txtNombre.Location = new System.Drawing.Point(102, 390);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(114, 20);
             this.txtNombre.TabIndex = 31;
@@ -160,7 +164,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(43, 450);
+            this.lblPrecio.Location = new System.Drawing.Point(42, 456);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(40, 13);
             this.lblPrecio.TabIndex = 30;
@@ -169,7 +173,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(43, 487);
+            this.lblStock.Location = new System.Drawing.Point(42, 493);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(38, 13);
             this.lblStock.TabIndex = 29;
@@ -178,7 +182,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(43, 418);
+            this.lblMarca.Location = new System.Drawing.Point(42, 424);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(40, 13);
             this.lblMarca.TabIndex = 28;
@@ -187,7 +191,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(43, 387);
+            this.lblNombre.Location = new System.Drawing.Point(42, 393);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(47, 13);
             this.lblNombre.TabIndex = 27;
@@ -195,7 +199,7 @@
             // 
             // btnCancelarAgregado
             // 
-            this.btnCancelarAgregado.Location = new System.Drawing.Point(142, 237);
+            this.btnCancelarAgregado.Location = new System.Drawing.Point(142, 276);
             this.btnCancelarAgregado.Name = "btnCancelarAgregado";
             this.btnCancelarAgregado.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarAgregado.TabIndex = 46;
@@ -267,7 +271,7 @@
             // 
             this.lblModProd.AutoSize = true;
             this.lblModProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModProd.Location = new System.Drawing.Point(12, 304);
+            this.lblModProd.Location = new System.Drawing.Point(11, 314);
             this.lblModProd.Name = "lblModProd";
             this.lblModProd.Size = new System.Drawing.Size(185, 24);
             this.lblModProd.TabIndex = 50;
@@ -275,7 +279,7 @@
             // 
             // btnAceptarAgregar
             // 
-            this.btnAceptarAgregar.Location = new System.Drawing.Point(47, 237);
+            this.btnAceptarAgregar.Location = new System.Drawing.Point(47, 276);
             this.btnAceptarAgregar.Name = "btnAceptarAgregar";
             this.btnAceptarAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarAgregar.TabIndex = 51;
@@ -300,7 +304,7 @@
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Location = new System.Drawing.Point(17, 195);
+            this.lblProveedor.Location = new System.Drawing.Point(17, 236);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(59, 13);
             this.lblProveedor.TabIndex = 55;
@@ -309,17 +313,54 @@
             // cbxProveedores
             // 
             this.cbxProveedores.FormattingEnabled = true;
-            this.cbxProveedores.Location = new System.Drawing.Point(96, 192);
+            this.cbxProveedores.Location = new System.Drawing.Point(96, 233);
             this.cbxProveedores.Name = "cbxProveedores";
             this.cbxProveedores.Size = new System.Drawing.Size(121, 21);
             this.cbxProveedores.TabIndex = 56;
             this.cbxProveedores.SelectedIndexChanged += new System.EventHandler(this.cbxProveedores_SelectedIndexChanged);
             // 
+            // txtPorcentaje
+            // 
+            this.txtPorcentaje.Location = new System.Drawing.Point(96, 197);
+            this.txtPorcentaje.Name = "txtPorcentaje";
+            this.txtPorcentaje.Size = new System.Drawing.Size(121, 20);
+            this.txtPorcentaje.TabIndex = 57;
+            // 
+            // lblPorcentaje
+            // 
+            this.lblPorcentaje.AutoSize = true;
+            this.lblPorcentaje.Location = new System.Drawing.Point(12, 200);
+            this.lblPorcentaje.Name = "lblPorcentaje";
+            this.lblPorcentaje.Size = new System.Drawing.Size(64, 13);
+            this.lblPorcentaje.TabIndex = 58;
+            this.lblPorcentaje.Text = "% Ganancia";
+            // 
+            // lblGanancia
+            // 
+            this.lblGanancia.AutoSize = true;
+            this.lblGanancia.Location = new System.Drawing.Point(18, 528);
+            this.lblGanancia.Name = "lblGanancia";
+            this.lblGanancia.Size = new System.Drawing.Size(64, 13);
+            this.lblGanancia.TabIndex = 60;
+            this.lblGanancia.Text = "% Ganancia";
+            // 
+            // txtGananciaMod
+            // 
+            this.txtGananciaMod.Enabled = false;
+            this.txtGananciaMod.Location = new System.Drawing.Point(102, 525);
+            this.txtGananciaMod.Name = "txtGananciaMod";
+            this.txtGananciaMod.Size = new System.Drawing.Size(114, 20);
+            this.txtGananciaMod.TabIndex = 59;
+            // 
             // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 560);
+            this.ClientSize = new System.Drawing.Size(692, 604);
+            this.Controls.Add(this.lblGanancia);
+            this.Controls.Add(this.txtGananciaMod);
+            this.Controls.Add(this.lblPorcentaje);
+            this.Controls.Add(this.txtPorcentaje);
             this.Controls.Add(this.cbxProveedores);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.txtPrecioAgregar);
@@ -390,5 +431,9 @@
         private System.Windows.Forms.TextBox txtPrecioAgregar;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.ComboBox cbxProveedores;
+        private System.Windows.Forms.TextBox txtPorcentaje;
+        private System.Windows.Forms.Label lblPorcentaje;
+        private System.Windows.Forms.Label lblGanancia;
+        private System.Windows.Forms.TextBox txtGananciaMod;
     }
 }

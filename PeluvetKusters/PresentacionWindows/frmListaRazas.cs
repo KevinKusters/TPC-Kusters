@@ -32,7 +32,9 @@ namespace PresentacionWindows
             try
             {
                 listaRazasLocal = negocio.listarRazas();
-                dgvListaRazas.DataSource = listaRazasLocal;                
+                dgvListaRazas.DataSource = listaRazasLocal;
+
+                dgvListaRazas.Columns[2].Visible = false;
             }
             catch (Exception ex)
             {
@@ -59,10 +61,10 @@ namespace PresentacionWindows
                     RazaNegocio agregarnuevo = new RazaNegocio();
 
                     agregar.nombre = txtNombreAgr.Text;
+                    agregar.estado = true;
                     agregarnuevo.AgregarRaza(agregar);
                     MessageBox.Show("Raza agregada", "Mesnaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     cargarGrilla();
-
                 }
                 catch (Exception ex)
                 {
@@ -103,6 +105,10 @@ namespace PresentacionWindows
                     modificada.nombre = txtnombreMod.Text;
                     ModNegocio.modificarRaza(modificada);                   
                     MessageBox.Show("Raza Modificada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    txtIdRaza.Text = "";
+                    txtnombreMod.Text = "";
+
                     cargarGrilla();
                 }
                 catch (Exception ex)

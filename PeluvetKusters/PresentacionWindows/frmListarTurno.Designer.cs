@@ -29,74 +29,75 @@
         private void InitializeComponent()
         {
             this.dgvTurnos = new System.Windows.Forms.DataGridView();
-            this.btnListarTodos = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.btnaceptar = new System.Windows.Forms.Button();
-            this.cldturnos = new System.Windows.Forms.MonthCalendar();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.btnListarTodos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTurnos
             // 
             this.dgvTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTurnos.Location = new System.Drawing.Point(15, 236);
+            this.dgvTurnos.Location = new System.Drawing.Point(12, 104);
             this.dgvTurnos.Name = "dgvTurnos";
-            this.dgvTurnos.Size = new System.Drawing.Size(773, 199);
+            this.dgvTurnos.Size = new System.Drawing.Size(773, 384);
             this.dgvTurnos.TabIndex = 19;
             // 
-            // btnListarTodos
+            // lblFecha
             // 
-            this.btnListarTodos.Location = new System.Drawing.Point(342, 189);
-            this.btnListarTodos.Name = "btnListarTodos";
-            this.btnListarTodos.Size = new System.Drawing.Size(82, 23);
-            this.btnListarTodos.TabIndex = 18;
-            this.btnListarTodos.Text = "Listar todos";
-            this.btnListarTodos.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Fecha:";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(12, 53);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(40, 13);
+            this.lblFecha.TabIndex = 17;
+            this.lblFecha.Text = "Fecha:";
             // 
             // txtFecha
             // 
-            this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(58, 189);
+            this.txtFecha.Location = new System.Drawing.Point(58, 50);
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(181, 20);
             this.txtFecha.TabIndex = 16;
             // 
             // btnaceptar
             // 
-            this.btnaceptar.Location = new System.Drawing.Point(254, 189);
+            this.btnaceptar.Location = new System.Drawing.Point(276, 24);
             this.btnaceptar.Name = "btnaceptar";
             this.btnaceptar.Size = new System.Drawing.Size(82, 23);
             this.btnaceptar.TabIndex = 15;
             this.btnaceptar.Text = "Aceptar";
             this.btnaceptar.UseVisualStyleBackColor = true;
             // 
-            // cldturnos
+            // dtpFecha
             // 
-            this.cldturnos.Location = new System.Drawing.Point(12, 15);
-            this.cldturnos.Name = "cldturnos";
-            this.cldturnos.TabIndex = 14;
+            this.dtpFecha.Location = new System.Drawing.Point(58, 24);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(181, 20);
+            this.dtpFecha.TabIndex = 20;
+            // 
+            // btnListarTodos
+            // 
+            this.btnListarTodos.Location = new System.Drawing.Point(364, 24);
+            this.btnListarTodos.Name = "btnListarTodos";
+            this.btnListarTodos.Size = new System.Drawing.Size(82, 23);
+            this.btnListarTodos.TabIndex = 18;
+            this.btnListarTodos.Text = "Listar todos";
+            this.btnListarTodos.UseVisualStyleBackColor = true;
             // 
             // frmListarTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 522);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.dgvTurnos);
             this.Controls.Add(this.btnListarTodos);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnaceptar);
-            this.Controls.Add(this.cldturnos);
             this.Name = "frmListarTurno";
             this.Text = "frmListarTurno";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).EndInit();
@@ -108,10 +109,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTurnos;
-        private System.Windows.Forms.Button btnListarTodos;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Button btnaceptar;
-        private System.Windows.Forms.MonthCalendar cldturnos;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnListarTodos;
     }
 }

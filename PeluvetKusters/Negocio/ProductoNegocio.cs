@@ -14,10 +14,10 @@ namespace Negocio
         {
             List<Producto> listado = new List<Producto>();
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
-            Producto prod = new Producto();
+            Producto prod;
             try
             {
-                accesoDatos.setearConsulta("SELECT * FROM PRODUCTOS");
+                accesoDatos.setearConsulta("SELECT * FROM PRODUCTOS where estado like 1");
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarConsulta();
                 while (accesoDatos.Lector.Read())
@@ -28,7 +28,10 @@ namespace Negocio
                     prod.descripcion = accesoDatos.Lector["DESCRIPCION"].ToString();
                     prod.stock = (int)accesoDatos.Lector["STOCK"];
                     prod.precio = (decimal)accesoDatos.Lector["PRECIO"];
+                    prod.precioVenta = (decimal)accesoDatos.Lector["PRECIOVENTA"];
+                    prod.porcentGanancia = (int)accesoDatos.Lector["PORCENTAJEGANANCIA"];
                     prod.marca = accesoDatos.Lector["MARCA"].ToString();
+                    prod.estado = (bool)accesoDatos.Lector["ESTADO"];
                    
                     listado.Add(prod);
                 }
@@ -52,12 +55,15 @@ namespace Negocio
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();            
             try
             {            
-                accesoDatos.setearConsulta("INSERT INTO PRODUCTOS output inserted.id values (@descripcion,@stock,@precio,@marca)");               
+                accesoDatos.setearConsulta("INSERT INTO PRODUCTOS output inserted.id values (@descripcion,@stock,@precio,@precioventa,@porcentajeganancia,@marca,@estado)");               
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@descripcion", prod.descripcion);
                 accesoDatos.Comando.Parameters.AddWithValue("@stock", prod.stock);
                 accesoDatos.Comando.Parameters.AddWithValue("@precio", prod.precio);
                 accesoDatos.Comando.Parameters.AddWithValue("@marca", prod.marca);
+                accesoDatos.Comando.Parameters.AddWithValue("@estado", prod.estado);
+                accesoDatos.Comando.Parameters.AddWithValue("@precioventa", prod.precioVenta);
+                accesoDatos.Comando.Parameters.AddWithValue("@porcentajeganancia", prod.porcentGanancia);
 
                 accesoDatos.abrirConexion();
                 return accesoDatos.ejecutarAccionReturn();
@@ -75,17 +81,18 @@ namespace Negocio
             try
             {
                 conexion = new ManagerAccesoDatos();
-                conexion.setearConsulta("update PRODUCTOS set DESCRIPCION = @descripcion, STOCK = @stock, PRECIO = @precio, MARCA = @marca Where Id = @id");
+                conexion.setearConsulta("update PRODUCTOS set DESCRIPCION = @descripcion, STOCK = @stock, PRECIO = @precio, PRECIOVENTA = @precioventa, PORCENTAJEGANANCIA = @porcentajeganancia, MARCA = @marca Where Id = @id");
                 conexion.Comando.Parameters.Clear();
                 conexion.Comando.Parameters.AddWithValue("@descripcion", mod.descripcion);
                 conexion.Comando.Parameters.AddWithValue("@stock", mod.stock);
                 conexion.Comando.Parameters.AddWithValue("@precio", mod.precio);
+                conexion.Comando.Parameters.AddWithValue("@precioventa", mod.precioVenta);
+                conexion.Comando.Parameters.AddWithValue("@porcentajeganancia", mod.porcentGanancia);
                 conexion.Comando.Parameters.AddWithValue("@marca", mod.marca);
                 conexion.Comando.Parameters.AddWithValue("@id", mod.idProducto);
 
                 conexion.abrirConexion();
                 conexion.ejecutarAccion();
-
 
             }
             catch (Exception ex)
@@ -109,7 +116,7 @@ namespace Negocio
                 if (accesoDatos.Lector.Read())
                 {
                     aux = (int)accesoDatos.Lector["ID"];
-                    return aux +1;   
+                    return aux;   
                 }
 
                 return accesoDatos.ejecutarAccionReturn();

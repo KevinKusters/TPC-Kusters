@@ -13,6 +13,9 @@ namespace Dominio
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string especie { get; set; }
-        Raza raz;
+        public bool Estado { get; set; }
+        public Raza raza;
+
+        public string Raza { get { return raza.nombre; } }
     }
 }

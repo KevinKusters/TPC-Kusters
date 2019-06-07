@@ -11,6 +11,7 @@ namespace Dominio
         public int id { get; set; }
         public string razonSocial { get; set; }
         public Int64 cuit { get; set; }
+        public bool estado { get; set; }
     }
 }
 

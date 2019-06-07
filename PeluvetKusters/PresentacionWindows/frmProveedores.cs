@@ -33,6 +33,8 @@ namespace PresentacionWindows
             {                
                 listaprovLocal = negocio.ListarProveedor();
                 dgvProveedores.DataSource = listaprovLocal;
+
+                dgvProveedores.Columns[7].Visible = false;
             }
             catch (Exception ex)
             {
@@ -67,9 +69,10 @@ namespace PresentacionWindows
                     aux.Telefono = txtTelefono.Text;
                     aux.contacto = txtContacto.Text;
                     aux.razonSocial = txtRazonSocial.Text;
-                    aux.cuit = Int64.Parse(txtCuit.Text);               
+                    aux.cuit = Int64.Parse(txtCuit.Text);
+                    aux.estado = true;
 
-                    auxnegocio.Agregar_PersonaJuridica(aux.razonSocial, aux.cuit);
+                    auxnegocio.Agregar_PersonaJuridica(aux.razonSocial, aux.cuit,aux.estado);
 
                     auxint = auxnegocio.recuperar_id();
                     aux.id = auxint;

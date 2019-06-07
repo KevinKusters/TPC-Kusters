@@ -28,197 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarCliente));
             this.dgbAgregarCliente = new System.Windows.Forms.DataGridView();
-            this.lblOtro = new System.Windows.Forms.Label();
-            this.txtOtro = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rdbOtro = new System.Windows.Forms.RadioButton();
-            this.rbtGato = new System.Windows.Forms.RadioButton();
-            this.rbtPerro = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblMasc = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.lblCli = new System.Windows.Forms.Label();
-            this.lblApellidoMasc = new System.Windows.Forms.Label();
-            this.lblNombreMasc = new System.Windows.Forms.Label();
             this.lblContacto = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.lblApellidoCli = new System.Windows.Forms.Label();
             this.lblNombreCli = new System.Windows.Forms.Label();
-            this.txtNombreMasc = new System.Windows.Forms.TextBox();
-            this.txtApellidoMasc = new System.Windows.Forms.TextBox();
             this.txtContacto = new System.Windows.Forms.TextBox();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.txtApellidoCli = new System.Windows.Forms.TextBox();
             this.txtNombreCli = new System.Windows.Forms.TextBox();
+            this.cmbLocalidades = new System.Windows.Forms.ComboBox();
+            this.btnAgregarMascota = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgbAgregarCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // dgbAgregarCliente
             // 
             this.dgbAgregarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgbAgregarCliente.Location = new System.Drawing.Point(331, 14);
+            this.dgbAgregarCliente.Location = new System.Drawing.Point(268, 14);
             this.dgbAgregarCliente.Name = "dgbAgregarCliente";
-            this.dgbAgregarCliente.Size = new System.Drawing.Size(382, 397);
+            this.dgbAgregarCliente.Size = new System.Drawing.Size(445, 397);
             this.dgbAgregarCliente.TabIndex = 81;
             this.dgbAgregarCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgbAgregarCliente_CellContentClick);
             // 
-            // lblOtro
-            // 
-            this.lblOtro.AutoSize = true;
-            this.lblOtro.Location = new System.Drawing.Point(90, 225);
-            this.lblOtro.Name = "lblOtro";
-            this.lblOtro.Size = new System.Drawing.Size(33, 13);
-            this.lblOtro.TabIndex = 80;
-            this.lblOtro.Text = "Otro: ";
-            // 
-            // txtOtro
-            // 
-            this.txtOtro.Location = new System.Drawing.Point(152, 225);
-            this.txtOtro.Name = "txtOtro";
-            this.txtOtro.Size = new System.Drawing.Size(154, 20);
-            this.txtOtro.TabIndex = 79;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Especie: ";
-            // 
-            // rdbOtro
-            // 
-            this.rdbOtro.AutoSize = true;
-            this.rdbOtro.Checked = true;
-            this.rdbOtro.Location = new System.Drawing.Point(261, 195);
-            this.rdbOtro.Name = "rdbOtro";
-            this.rdbOtro.Size = new System.Drawing.Size(45, 17);
-            this.rdbOtro.TabIndex = 77;
-            this.rdbOtro.TabStop = true;
-            this.rdbOtro.Text = "Otro";
-            this.rdbOtro.UseVisualStyleBackColor = true;
-            // 
-            // rbtGato
-            // 
-            this.rbtGato.AutoSize = true;
-            this.rbtGato.Location = new System.Drawing.Point(207, 195);
-            this.rbtGato.Name = "rbtGato";
-            this.rbtGato.Size = new System.Drawing.Size(48, 17);
-            this.rbtGato.TabIndex = 76;
-            this.rbtGato.Text = "Gato";
-            this.rbtGato.UseVisualStyleBackColor = true;
-            // 
-            // rbtPerro
-            // 
-            this.rbtPerro.AutoSize = true;
-            this.rbtPerro.Location = new System.Drawing.Point(151, 195);
-            this.rbtPerro.Name = "rbtPerro";
-            this.rbtPerro.Size = new System.Drawing.Size(50, 17);
-            this.rbtPerro.TabIndex = 75;
-            this.rbtPerro.Text = "Perro";
-            this.rbtPerro.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 327);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "Raza: ";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 318);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 21);
-            this.comboBox1.TabIndex = 73;
-            // 
             // btnmodificar
             // 
-            this.btnmodificar.Location = new System.Drawing.Point(543, 417);
+            this.btnmodificar.Location = new System.Drawing.Point(514, 421);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(170, 23);
+            this.btnmodificar.Size = new System.Drawing.Size(93, 23);
             this.btnmodificar.TabIndex = 72;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(215, 417);
+            this.btnCancelar.Location = new System.Drawing.Point(143, 183);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 23);
             this.btnCancelar.TabIndex = 71;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnGuardar
+            // btnAgregar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(90, 417);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(91, 23);
-            this.btnGuardar.TabIndex = 70;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(91, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Agregar Mascota";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblMasc
-            // 
-            this.lblMasc.AutoSize = true;
-            this.lblMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMasc.Location = new System.Drawing.Point(90, 154);
-            this.lblMasc.Name = "lblMasc";
-            this.lblMasc.Size = new System.Drawing.Size(94, 25);
-            this.lblMasc.TabIndex = 68;
-            this.lblMasc.Text = "Mascota";
+            this.btnAgregar.Location = new System.Drawing.Point(46, 183);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(91, 23);
+            this.btnAgregar.TabIndex = 70;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblCli
             // 
             this.lblCli.AutoSize = true;
             this.lblCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCli.Location = new System.Drawing.Point(90, 11);
+            this.lblCli.Location = new System.Drawing.Point(12, 9);
             this.lblCli.Name = "lblCli";
             this.lblCli.Size = new System.Drawing.Size(79, 25);
             this.lblCli.TabIndex = 67;
             this.lblCli.Text = "Cliente";
             // 
-            // lblApellidoMasc
-            // 
-            this.lblApellidoMasc.AutoSize = true;
-            this.lblApellidoMasc.Location = new System.Drawing.Point(90, 295);
-            this.lblApellidoMasc.Name = "lblApellidoMasc";
-            this.lblApellidoMasc.Size = new System.Drawing.Size(50, 13);
-            this.lblApellidoMasc.TabIndex = 66;
-            this.lblApellidoMasc.Text = "Apellido: ";
-            // 
-            // lblNombreMasc
-            // 
-            this.lblNombreMasc.AutoSize = true;
-            this.lblNombreMasc.Location = new System.Drawing.Point(90, 269);
-            this.lblNombreMasc.Name = "lblNombreMasc";
-            this.lblNombreMasc.Size = new System.Drawing.Size(50, 13);
-            this.lblNombreMasc.TabIndex = 65;
-            this.lblNombreMasc.Text = "Nombre: ";
-            // 
             // lblContacto
             // 
             this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(90, 128);
+            this.lblContacto.Location = new System.Drawing.Point(18, 111);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(56, 13);
             this.lblContacto.TabIndex = 64;
@@ -227,7 +106,7 @@
             // lblLocalidad
             // 
             this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Location = new System.Drawing.Point(90, 102);
+            this.lblLocalidad.Location = new System.Drawing.Point(17, 139);
             this.lblLocalidad.Name = "lblLocalidad";
             this.lblLocalidad.Size = new System.Drawing.Size(59, 13);
             this.lblLocalidad.TabIndex = 63;
@@ -236,7 +115,7 @@
             // lblApellidoCli
             // 
             this.lblApellidoCli.AutoSize = true;
-            this.lblApellidoCli.Location = new System.Drawing.Point(90, 76);
+            this.lblApellidoCli.Location = new System.Drawing.Point(18, 85);
             this.lblApellidoCli.Name = "lblApellidoCli";
             this.lblApellidoCli.Size = new System.Drawing.Size(50, 13);
             this.lblApellidoCli.TabIndex = 62;
@@ -245,84 +124,70 @@
             // lblNombreCli
             // 
             this.lblNombreCli.AutoSize = true;
-            this.lblNombreCli.Location = new System.Drawing.Point(90, 46);
+            this.lblNombreCli.Location = new System.Drawing.Point(18, 55);
             this.lblNombreCli.Name = "lblNombreCli";
             this.lblNombreCli.Size = new System.Drawing.Size(50, 13);
             this.lblNombreCli.TabIndex = 61;
             this.lblNombreCli.Text = "Nombre: ";
             // 
-            // txtNombreMasc
-            // 
-            this.txtNombreMasc.Location = new System.Drawing.Point(150, 266);
-            this.txtNombreMasc.Name = "txtNombreMasc";
-            this.txtNombreMasc.Size = new System.Drawing.Size(156, 20);
-            this.txtNombreMasc.TabIndex = 60;
-            // 
-            // txtApellidoMasc
-            // 
-            this.txtApellidoMasc.Location = new System.Drawing.Point(150, 292);
-            this.txtApellidoMasc.Name = "txtApellidoMasc";
-            this.txtApellidoMasc.Size = new System.Drawing.Size(156, 20);
-            this.txtApellidoMasc.TabIndex = 59;
-            // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(150, 121);
+            this.txtContacto.Location = new System.Drawing.Point(78, 104);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(156, 20);
             this.txtContacto.TabIndex = 58;
             // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.Location = new System.Drawing.Point(150, 95);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(156, 20);
-            this.txtLocalidad.TabIndex = 57;
-            // 
             // txtApellidoCli
             // 
-            this.txtApellidoCli.Location = new System.Drawing.Point(150, 69);
+            this.txtApellidoCli.Location = new System.Drawing.Point(78, 78);
             this.txtApellidoCli.Name = "txtApellidoCli";
             this.txtApellidoCli.Size = new System.Drawing.Size(156, 20);
             this.txtApellidoCli.TabIndex = 56;
             // 
             // txtNombreCli
             // 
-            this.txtNombreCli.Location = new System.Drawing.Point(150, 43);
+            this.txtNombreCli.Location = new System.Drawing.Point(78, 52);
             this.txtNombreCli.Name = "txtNombreCli";
             this.txtNombreCli.Size = new System.Drawing.Size(156, 20);
             this.txtNombreCli.TabIndex = 55;
+            // 
+            // cmbLocalidades
+            // 
+            this.cmbLocalidades.FormattingEnabled = true;
+            this.cmbLocalidades.Location = new System.Drawing.Point(78, 136);
+            this.cmbLocalidades.Name = "cmbLocalidades";
+            this.cmbLocalidades.Size = new System.Drawing.Size(156, 21);
+            this.cmbLocalidades.TabIndex = 83;
+            this.cmbLocalidades.SelectedIndexChanged += new System.EventHandler(this.cmbLocalidades_SelectedIndexChanged);
+            // 
+            // btnAgregarMascota
+            // 
+            this.btnAgregarMascota.Location = new System.Drawing.Point(613, 421);
+            this.btnAgregarMascota.Name = "btnAgregarMascota";
+            this.btnAgregarMascota.Size = new System.Drawing.Size(100, 23);
+            this.btnAgregarMascota.TabIndex = 84;
+            this.btnAgregarMascota.Text = "Agregar mascota";
+            this.btnAgregarMascota.UseVisualStyleBackColor = true;
+            this.btnAgregarMascota.Click += new System.EventHandler(this.btnAgregarMascota_Click);
             // 
             // frmAgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(733, 464);
+            this.Controls.Add(this.btnAgregarMascota);
+            this.Controls.Add(this.cmbLocalidades);
             this.Controls.Add(this.dgbAgregarCliente);
-            this.Controls.Add(this.lblOtro);
-            this.Controls.Add(this.txtOtro);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.rdbOtro);
-            this.Controls.Add(this.rbtGato);
-            this.Controls.Add(this.rbtPerro);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblMasc);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblCli);
-            this.Controls.Add(this.lblApellidoMasc);
-            this.Controls.Add(this.lblNombreMasc);
             this.Controls.Add(this.lblContacto);
             this.Controls.Add(this.lblLocalidad);
             this.Controls.Add(this.lblApellidoCli);
             this.Controls.Add(this.lblNombreCli);
-            this.Controls.Add(this.txtNombreMasc);
-            this.Controls.Add(this.txtApellidoMasc);
             this.Controls.Add(this.txtContacto);
-            this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.txtApellidoCli);
             this.Controls.Add(this.txtNombreCli);
             this.Name = "frmAgregarCliente";
@@ -337,31 +202,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgbAgregarCliente;
-        private System.Windows.Forms.Label lblOtro;
-        private System.Windows.Forms.TextBox txtOtro;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rdbOtro;
-        private System.Windows.Forms.RadioButton rbtGato;
-        private System.Windows.Forms.RadioButton rbtPerro;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblMasc;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblCli;
-        private System.Windows.Forms.Label lblApellidoMasc;
-        private System.Windows.Forms.Label lblNombreMasc;
         private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Label lblApellidoCli;
         private System.Windows.Forms.Label lblNombreCli;
-        private System.Windows.Forms.TextBox txtNombreMasc;
-        private System.Windows.Forms.TextBox txtApellidoMasc;
         private System.Windows.Forms.TextBox txtContacto;
-        private System.Windows.Forms.TextBox txtLocalidad;
         private System.Windows.Forms.TextBox txtApellidoCli;
         private System.Windows.Forms.TextBox txtNombreCli;
+        private System.Windows.Forms.ComboBox cmbLocalidades;
+        private System.Windows.Forms.Button btnAgregarMascota;
     }
 }

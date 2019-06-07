@@ -9,10 +9,12 @@ namespace Dominio
     {
 
         public int id;
-        Cliente cli;
-        Animal ani;
-        Empleado emp;
-        Servicio serv;
+        public bool estado { get; set; }
+        public Cliente cliente;
+        public Animal animal;
+        public Empleado empleado;
+        public Servicio servicio;
         public DateTime fecha { get; set; }
+        public DateTime hora { get; set; }
     }
 }

@@ -33,6 +33,7 @@ namespace PresentacionWindows
             txtMarca.Enabled = true;
             txtStock.Enabled = true;
             txtPrecio.Enabled = true;
+            txtGananciaMod.Enabled = true;
         }
 
         void Disabletxt()
@@ -41,6 +42,7 @@ namespace PresentacionWindows
             txtMarca.Enabled = false;
             txtStock.Enabled = false;
             txtPrecio.Enabled = false;
+            txtGananciaMod.Enabled = false;
         }
 
         public frmListaProductos()
@@ -55,6 +57,9 @@ namespace PresentacionWindows
             {
                 listaProdLocal = negocio.listarProductos();
                 dgvListaProd.DataSource = listaProdLocal;
+
+                dgvListaProd.Columns[7].Visible = false;
+                dgvListaProd.Columns[5].Visible = false;
             }
             catch (Exception ex)
             {
@@ -83,11 +88,13 @@ namespace PresentacionWindows
                     Producto modificar;
 
                     modificar = (Producto)dgvListaProd.CurrentRow.DataBoundItem;
+
                     txtIdProd.Text = modificar.idProducto.ToString();
                     txtNombre.Text = modificar.descripcion;
                     txtMarca.Text = modificar.marca;
                     txtPrecio.Text = modificar.precio.ToString();
                     txtStock.Text = modificar.stock.ToString();
+                    txtGananciaMod.Text = modificar.porcentGanancia.ToString();
                     Enabletxt();
                 }
                 catch (Exception ex)
@@ -112,16 +119,22 @@ namespace PresentacionWindows
             {
                 try
                 {
-                    int auxint;
-                    auxint = negocio.buscar_ultimo_idprod();
+                    decimal aux;
+                    
                     agregar.descripcion = txtNombreAgregar.Text;
                     agregar.marca = txtMarcaAgregar.Text;
                     agregar.precio = decimal.Parse(txtPrecioAgregar.Text);
+                    aux = int.Parse(txtPorcentaje.Text);
+                    agregar.precioVenta = (agregar.precio * aux / 100)+agregar.precio;
+                    agregar.porcentGanancia =int.Parse(txtPorcentaje.Text);
                     agregar.stock = int.Parse(txtStockAgregar.Text);
-                    Aux= (Proveedor)cbxProveedores.SelectedItem;
+                    agregar.estado = true;
+                    Aux= (Proveedor)cbxProveedores.SelectedItem;                   
 
                     negocio.Agregarproducto(agregar);
-                    auxnegocio.CargarProdXProv(Aux.idProveedor, auxint);                    
+
+                    agregar.idProducto = negocio.buscar_ultimo_idprod();
+                    auxnegocio.CargarProdXProv(Aux.idProveedor, agregar.idProducto);                    
 
                     cargarGrilla();                    
                 }
@@ -130,9 +143,7 @@ namespace PresentacionWindows
                     throw ex;
                 }            
             }            
-        }
-
-     
+        }     
 
         private void btnModAceptar_Click(object sender, EventArgs e)
         {
@@ -148,10 +159,14 @@ namespace PresentacionWindows
 
                 try
                 {
+                    int aux;
+
                     modificado.idProducto = int.Parse(txtIdProd.Text);
                     modificado.descripcion = txtNombre.Text;
                     modificado.marca = txtMarca.Text;
                     modificado.precio = decimal.Parse(txtPrecio.Text);
+                    aux = int.Parse(txtGananciaMod.Text);
+                    modificado.precioVenta = (modificado.precio * aux / 100) + modificado.precio;
                     modificado.stock = int.Parse(txtStock.Text);
 
                     Disabletxt();
@@ -174,7 +189,8 @@ namespace PresentacionWindows
             txtNombreAgregar.Text = "";
             txtMarcaAgregar.Text = "";
             txtPrecioAgregar.Text = "";
-            txtStockAgregar.Text = "";            
+            txtStockAgregar.Text = "";
+            txtPorcentaje.Text = "";
         }
 
         private void btnCancelarMod_Click(object sender, EventArgs e)
@@ -184,6 +200,7 @@ namespace PresentacionWindows
             txtMarca.Text = "";
             txtPrecio.Text = "";
             txtStock.Text = "";
+            txtGananciaMod.Text = "";
 
             Disabletxt();
         }

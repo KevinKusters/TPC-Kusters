@@ -50,12 +50,13 @@ namespace Negocio
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("INSERT INTO PROVEEDORES (nombre, idperjuridica, email, telefono) VALUES (@NOMBRE,@IDPERJURIDICA,@EMAIL,@TELEFONO)");
+                accesoDatos.setearConsulta("INSERT INTO PROVEEDORES (nombre, idperjuridica, email, telefono, estado) VALUES (@NOMBRE,@IDPERJURIDICA,@EMAIL,@TELEFONO,@ESTADO)");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@NOMBRE", aux.Nombre);
                 accesoDatos.Comando.Parameters.AddWithValue("@IDPERJURIDICA", aux.id);
                 accesoDatos.Comando.Parameters.AddWithValue("@EMAIL", aux.contacto);
                 accesoDatos.Comando.Parameters.AddWithValue("@TELEFONO", aux.Telefono);
+                accesoDatos.Comando.Parameters.AddWithValue("@estado", aux.estado);
 
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarAccion();

@@ -46,9 +46,12 @@
             // 
             // dgvListaRazas
             // 
+            this.dgvListaRazas.AllowUserToAddRows = false;
+            this.dgvListaRazas.AllowUserToDeleteRows = false;
             this.dgvListaRazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaRazas.Location = new System.Drawing.Point(267, 12);
             this.dgvListaRazas.Name = "dgvListaRazas";
+            this.dgvListaRazas.ReadOnly = true;
             this.dgvListaRazas.Size = new System.Drawing.Size(234, 340);
             this.dgvListaRazas.TabIndex = 0;
             // 

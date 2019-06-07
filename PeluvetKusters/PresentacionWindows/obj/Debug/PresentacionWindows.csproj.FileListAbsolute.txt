@@ -14,7 +14,6 @@ D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\Pr
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAgregarCliente.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAgregarTurno.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListarCliente.resources
-D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListarClienteAux.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListarTurno.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmPrincipal.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\bin\Debug\AccesoDatos.exe
@@ -26,3 +25,10 @@ D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\bin\Debug\Ne
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\bin\Debug\Negocio.exe.config
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListaProductos.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmProveedores.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmLocalidades.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAgregarMascota.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmEmpleados.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmPuestos.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListaMascotas.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAgregarServicios.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmBuscarMascota.resources

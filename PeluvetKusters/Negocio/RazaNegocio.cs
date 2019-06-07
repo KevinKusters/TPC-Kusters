@@ -17,7 +17,7 @@ namespace Negocio
             Raza raz = new Raza();
             try
             {
-                accesoDatos.setearConsulta("SELECT * FROM RAZAS");
+                accesoDatos.setearConsulta("SELECT * FROM RAZAS where estado like 1");
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarConsulta();
                 while (accesoDatos.Lector.Read())
@@ -25,6 +25,7 @@ namespace Negocio
                     raz = new Raza();
                     raz.id = (int)accesoDatos.Lector["ID"];
                     raz.nombre = accesoDatos.Lector["NOMBRE"].ToString();
+                    raz.estado = (bool)accesoDatos.Lector["ESTADO"];
                     listado.Add(raz);
                 }
 
@@ -46,9 +47,10 @@ namespace Negocio
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("INSERT INTO RAZAS output inserted.id values (@nombre)");
+                accesoDatos.setearConsulta("INSERT INTO RAZAS output inserted.id values (@nombre, @estado)");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@nombre", raza.nombre);
+                accesoDatos.Comando.Parameters.AddWithValue("@estado", raza.estado);
                 accesoDatos.abrirConexion();
                 
 

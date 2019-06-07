@@ -11,15 +11,16 @@ namespace Negocio
 {
     public class PersonaJuridicaNegocio
     {
-        public void Agregar_PersonaJuridica(string razon, Int64 cuit) {
+        public void Agregar_PersonaJuridica(string razon, Int64 cuit, bool estado) {
 
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("insert into personasJuridicas (Razonsocial, cuit) values (@RAZONSOCIAL,@CUIT)");
+                accesoDatos.setearConsulta("insert into personasJuridicas (RAZONSOCIAL, CUIT ,ESTADO) values (@RAZONSOCIAL,@CUIT,@ESTADO)");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@RAZONSOCIAL", razon);
                 accesoDatos.Comando.Parameters.AddWithValue("@CUIT", cuit);
+                accesoDatos.Comando.Parameters.AddWithValue("@ESTADO", estado);
 
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarAccion();

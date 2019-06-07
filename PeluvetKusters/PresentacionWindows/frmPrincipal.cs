@@ -19,6 +19,10 @@ namespace PresentacionWindows
         frmListaRazas listaraza;
         frmListaProductos listaprod;
         frmProveedores proveedores;
+        frmLocalidades localidades;
+        frmEmpleados empleados;
+        frmPuestos puestos;
+        frmAgregarServicios servicios;
 
         public frmPrincipal()
         {
@@ -153,5 +157,69 @@ namespace PresentacionWindows
             proveedores = null;
         }
 
+        private void localidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(localidades == null)
+            {
+                localidades = new frmLocalidades();
+                localidades.MdiParent = this;
+                localidades.FormClosed += new FormClosedEventHandler(localidadesFormclosed);
+                localidades.Show();
+            }
+        }
+
+        void localidadesFormclosed(object sender, EventArgs e)
+        {
+            localidades = null;
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(empleados == null)
+            {
+                empleados = new frmEmpleados();
+                empleados.MdiParent = this;
+                empleados.FormClosed += new FormClosedEventHandler(empleadosFormClosed);
+                empleados.Show();                     
+            }
+        }
+
+
+        void empleadosFormClosed (object sender, EventArgs e)
+        {
+            empleados = null;
+        }
+
+        private void puestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(puestos == null)
+            {
+                puestos = new frmPuestos();
+                puestos.MdiParent = this;
+                puestos.FormClosed += new FormClosedEventHandler(PuestosFormClosed);
+                puestos.Show();                     
+            }
+        }
+
+        void PuestosFormClosed (object sender, EventArgs e)
+        {
+            puestos = null;
+        }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(servicios == null)
+            {
+                servicios = new frmAgregarServicios();
+                servicios.MdiParent = this.MdiParent;
+                servicios.FormClosed += new FormClosedEventHandler(ServiciosFormClosed);
+                servicios.Show();
+            }
+        }
+
+        private void ServiciosFormClosed(object sender, EventArgs e)
+        {
+            servicios = null;
+        }
     }
 }

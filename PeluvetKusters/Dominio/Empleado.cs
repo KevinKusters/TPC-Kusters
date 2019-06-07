@@ -9,7 +9,11 @@ namespace Dominio
     public class Empleado : Persona
     {
         public int id;
-        public string contacto { get; set; }
-        public string puesto { get; set; }
+        public string contacto { get; set; }        
+        public bool estado { get; set; }
+        public string rubro { get; set; }
+        public Puesto puesto;
+
+        public string Puesto { get { return puesto.Descripcion; }}
     }
 }

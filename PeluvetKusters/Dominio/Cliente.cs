@@ -10,7 +10,10 @@ namespace Dominio
     {
         public int id;
         public string contacto { get; set; }
-        Localidad localidad;
-        Animal animal;
+        public bool estado { get; set; }
+        public Localidad localidad;
+        public Animal animal;
+
+        public string Localidad { get { return localidad.nombre; } }
     }
 }
