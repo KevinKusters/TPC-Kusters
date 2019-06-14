@@ -61,11 +61,15 @@
             this.lblPorcentaje = new System.Windows.Forms.Label();
             this.lblGanancia = new System.Windows.Forms.Label();
             this.txtGananciaMod = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProd)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaProd
             // 
+            this.dgvListaProd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaProd.Location = new System.Drawing.Point(244, 12);
             this.dgvListaProd.Name = "dgvListaProd";
@@ -74,6 +78,7 @@
             // 
             // btnListarTodos
             // 
+            this.btnListarTodos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnListarTodos.Location = new System.Drawing.Point(244, 569);
             this.btnListarTodos.Name = "btnListarTodos";
             this.btnListarTodos.Size = new System.Drawing.Size(84, 23);
@@ -84,6 +89,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Location = new System.Drawing.Point(334, 569);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 23);
@@ -94,6 +100,7 @@
             // 
             // txtStock
             // 
+            this.txtStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtStock.Enabled = false;
             this.txtStock.Location = new System.Drawing.Point(102, 490);
             this.txtStock.Name = "txtStock";
@@ -102,6 +109,7 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Location = new System.Drawing.Point(102, 453);
             this.txtPrecio.Name = "txtPrecio";
@@ -110,6 +118,7 @@
             // 
             // txtIdProd
             // 
+            this.txtIdProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtIdProd.Enabled = false;
             this.txtIdProd.Location = new System.Drawing.Point(102, 354);
             this.txtIdProd.Name = "txtIdProd";
@@ -118,6 +127,7 @@
             // 
             // lblID
             // 
+            this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(16, 357);
             this.lblID.Name = "lblID";
@@ -127,6 +137,7 @@
             // 
             // btnCancelarMod
             // 
+            this.btnCancelarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelarMod.Location = new System.Drawing.Point(142, 567);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(75, 23);
@@ -137,6 +148,7 @@
             // 
             // btnModAceptar
             // 
+            this.btnModAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnModAceptar.Location = new System.Drawing.Point(47, 567);
             this.btnModAceptar.Name = "btnModAceptar";
             this.btnModAceptar.Size = new System.Drawing.Size(75, 23);
@@ -147,6 +159,7 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMarca.Enabled = false;
             this.txtMarca.Location = new System.Drawing.Point(102, 421);
             this.txtMarca.Name = "txtMarca";
@@ -155,6 +168,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(102, 390);
             this.txtNombre.Name = "txtNombre";
@@ -163,6 +177,7 @@
             // 
             // lblPrecio
             // 
+            this.lblPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(42, 456);
             this.lblPrecio.Name = "lblPrecio";
@@ -172,6 +187,7 @@
             // 
             // lblStock
             // 
+            this.lblStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblStock.AutoSize = true;
             this.lblStock.Location = new System.Drawing.Point(42, 493);
             this.lblStock.Name = "lblStock";
@@ -181,6 +197,7 @@
             // 
             // lblMarca
             // 
+            this.lblMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(42, 424);
             this.lblMarca.Name = "lblMarca";
@@ -190,6 +207,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(42, 393);
             this.lblNombre.Name = "lblNombre";
@@ -199,6 +217,7 @@
             // 
             // btnCancelarAgregado
             // 
+            this.btnCancelarAgregado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelarAgregado.Location = new System.Drawing.Point(142, 276);
             this.btnCancelarAgregado.Name = "btnCancelarAgregado";
             this.btnCancelarAgregado.Size = new System.Drawing.Size(75, 23);
@@ -209,6 +228,7 @@
             // 
             // txtMarcaAgregar
             // 
+            this.txtMarcaAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMarcaAgregar.Location = new System.Drawing.Point(96, 86);
             this.txtMarcaAgregar.Name = "txtMarcaAgregar";
             this.txtMarcaAgregar.Size = new System.Drawing.Size(121, 20);
@@ -216,6 +236,7 @@
             // 
             // txtNombreAgregar
             // 
+            this.txtNombreAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNombreAgregar.Location = new System.Drawing.Point(96, 55);
             this.txtNombreAgregar.Name = "txtNombreAgregar";
             this.txtNombreAgregar.Size = new System.Drawing.Size(121, 20);
@@ -223,6 +244,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(36, 121);
             this.label1.Name = "label1";
@@ -232,6 +254,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(38, 158);
             this.label2.Name = "label2";
@@ -241,6 +264,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(36, 89);
             this.label3.Name = "label3";
@@ -250,6 +274,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(29, 58);
             this.label4.Name = "label4";
@@ -259,6 +284,7 @@
             // 
             // lblAgregarProd
             // 
+            this.lblAgregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAgregarProd.AutoSize = true;
             this.lblAgregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProd.Location = new System.Drawing.Point(12, 12);
@@ -269,6 +295,7 @@
             // 
             // lblModProd
             // 
+            this.lblModProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblModProd.AutoSize = true;
             this.lblModProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModProd.Location = new System.Drawing.Point(11, 314);
@@ -279,6 +306,7 @@
             // 
             // btnAceptarAgregar
             // 
+            this.btnAceptarAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAceptarAgregar.Location = new System.Drawing.Point(47, 276);
             this.btnAceptarAgregar.Name = "btnAceptarAgregar";
             this.btnAceptarAgregar.Size = new System.Drawing.Size(75, 23);
@@ -289,6 +317,7 @@
             // 
             // txtStockAgregar
             // 
+            this.txtStockAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtStockAgregar.Location = new System.Drawing.Point(96, 158);
             this.txtStockAgregar.Name = "txtStockAgregar";
             this.txtStockAgregar.Size = new System.Drawing.Size(121, 20);
@@ -296,6 +325,7 @@
             // 
             // txtPrecioAgregar
             // 
+            this.txtPrecioAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPrecioAgregar.Location = new System.Drawing.Point(96, 121);
             this.txtPrecioAgregar.Name = "txtPrecioAgregar";
             this.txtPrecioAgregar.Size = new System.Drawing.Size(121, 20);
@@ -303,6 +333,7 @@
             // 
             // lblProveedor
             // 
+            this.lblProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Location = new System.Drawing.Point(17, 236);
             this.lblProveedor.Name = "lblProveedor";
@@ -312,6 +343,7 @@
             // 
             // cbxProveedores
             // 
+            this.cbxProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbxProveedores.FormattingEnabled = true;
             this.cbxProveedores.Location = new System.Drawing.Point(96, 233);
             this.cbxProveedores.Name = "cbxProveedores";
@@ -321,6 +353,7 @@
             // 
             // txtPorcentaje
             // 
+            this.txtPorcentaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPorcentaje.Location = new System.Drawing.Point(96, 197);
             this.txtPorcentaje.Name = "txtPorcentaje";
             this.txtPorcentaje.Size = new System.Drawing.Size(121, 20);
@@ -328,6 +361,7 @@
             // 
             // lblPorcentaje
             // 
+            this.lblPorcentaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Location = new System.Drawing.Point(12, 200);
             this.lblPorcentaje.Name = "lblPorcentaje";
@@ -337,6 +371,7 @@
             // 
             // lblGanancia
             // 
+            this.lblGanancia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblGanancia.AutoSize = true;
             this.lblGanancia.Location = new System.Drawing.Point(18, 528);
             this.lblGanancia.Name = "lblGanancia";
@@ -346,17 +381,30 @@
             // 
             // txtGananciaMod
             // 
+            this.txtGananciaMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtGananciaMod.Enabled = false;
             this.txtGananciaMod.Location = new System.Drawing.Point(102, 525);
             this.txtGananciaMod.Name = "txtGananciaMod";
             this.txtGananciaMod.Size = new System.Drawing.Size(114, 20);
             this.txtGananciaMod.TabIndex = 59;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(429, 569);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 61;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 604);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblGanancia);
             this.Controls.Add(this.txtGananciaMod);
             this.Controls.Add(this.lblPorcentaje);
@@ -435,5 +483,6 @@
         private System.Windows.Forms.Label lblPorcentaje;
         private System.Windows.Forms.Label lblGanancia;
         private System.Windows.Forms.TextBox txtGananciaMod;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

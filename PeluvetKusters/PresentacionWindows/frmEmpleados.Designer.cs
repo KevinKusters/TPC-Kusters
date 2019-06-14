@@ -68,6 +68,9 @@
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
             this.dgvEmpleados.AllowUserToDeleteRows = false;
+            this.dgvEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Location = new System.Drawing.Point(230, 30);
             this.dgvEmpleados.Name = "dgvEmpleados";
@@ -241,6 +244,7 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAceptar.Location = new System.Drawing.Point(33, 471);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(80, 23);
@@ -251,6 +255,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.Location = new System.Drawing.Point(119, 471);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 23);
@@ -271,6 +276,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnModificar.Location = new System.Drawing.Point(230, 471);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(80, 23);
@@ -281,12 +287,14 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEliminar.Location = new System.Drawing.Point(316, 471);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 23);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // rdbPeluqueria
             // 

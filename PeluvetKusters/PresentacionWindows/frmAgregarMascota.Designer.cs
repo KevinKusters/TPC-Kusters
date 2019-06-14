@@ -149,6 +149,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.Location = new System.Drawing.Point(144, 282);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 23);
@@ -161,7 +162,7 @@
             // 
             this.lblMasc.AutoSize = true;
             this.lblMasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMasc.Location = new System.Drawing.Point(14, 111);
+            this.lblMasc.Location = new System.Drawing.Point(0, 111);
             this.lblMasc.Name = "lblMasc";
             this.lblMasc.Size = new System.Drawing.Size(94, 25);
             this.lblMasc.TabIndex = 85;
@@ -187,7 +188,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(16, 48);
+            this.lblNombre.Location = new System.Drawing.Point(11, 46);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(96, 13);
             this.lblNombre.TabIndex = 97;
@@ -195,7 +196,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(118, 45);
+            this.txtnombre.Location = new System.Drawing.Point(113, 43);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.ReadOnly = true;
             this.txtnombre.Size = new System.Drawing.Size(128, 20);
@@ -205,7 +206,7 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(55, 74);
+            this.lblApellido.Location = new System.Drawing.Point(50, 72);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(56, 13);
             this.lblApellido.TabIndex = 99;
@@ -213,7 +214,7 @@
             // 
             // txtapellido
             // 
-            this.txtapellido.Location = new System.Drawing.Point(117, 71);
+            this.txtapellido.Location = new System.Drawing.Point(112, 69);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.ReadOnly = true;
             this.txtapellido.Size = new System.Drawing.Size(127, 20);
@@ -242,7 +243,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(116, 19);
+            this.txtID.Location = new System.Drawing.Point(111, 17);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(27, 20);
@@ -252,7 +253,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(45, 22);
+            this.lblID.Location = new System.Drawing.Point(40, 20);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(66, 13);
             this.lblID.TabIndex = 105;
@@ -260,6 +261,7 @@
             // 
             // btnAgregarMascota
             // 
+            this.btnAgregarMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAgregarMascota.Location = new System.Drawing.Point(38, 282);
             this.btnAgregarMascota.Name = "btnAgregarMascota";
             this.btnAgregarMascota.Size = new System.Drawing.Size(100, 23);
@@ -272,7 +274,7 @@
             // 
             this.lblTituloMod.AutoSize = true;
             this.lblTituloMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloMod.Location = new System.Drawing.Point(15, 323);
+            this.lblTituloMod.Location = new System.Drawing.Point(1, 319);
             this.lblTituloMod.Name = "lblTituloMod";
             this.lblTituloMod.Size = new System.Drawing.Size(86, 24);
             this.lblTituloMod.TabIndex = 107;
@@ -280,6 +282,7 @@
             // 
             // btnAceptarMod
             // 
+            this.btnAceptarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAceptarMod.Location = new System.Drawing.Point(35, 498);
             this.btnAceptarMod.Name = "btnAceptarMod";
             this.btnAceptarMod.Size = new System.Drawing.Size(100, 23);
@@ -308,7 +311,7 @@
             // lblEspecieMod
             // 
             this.lblEspecieMod.AutoSize = true;
-            this.lblEspecieMod.Location = new System.Drawing.Point(26, 373);
+            this.lblEspecieMod.Location = new System.Drawing.Point(24, 380);
             this.lblEspecieMod.Name = "lblEspecieMod";
             this.lblEspecieMod.Size = new System.Drawing.Size(51, 13);
             this.lblEspecieMod.TabIndex = 116;
@@ -317,7 +320,7 @@
             // rdbOtroMod
             // 
             this.rdbOtroMod.AutoSize = true;
-            this.rdbOtroMod.Location = new System.Drawing.Point(198, 371);
+            this.rdbOtroMod.Location = new System.Drawing.Point(196, 378);
             this.rdbOtroMod.Name = "rdbOtroMod";
             this.rdbOtroMod.Size = new System.Drawing.Size(45, 17);
             this.rdbOtroMod.TabIndex = 115;
@@ -328,7 +331,7 @@
             // rdbGatoMod
             // 
             this.rdbGatoMod.AutoSize = true;
-            this.rdbGatoMod.Location = new System.Drawing.Point(144, 371);
+            this.rdbGatoMod.Location = new System.Drawing.Point(142, 378);
             this.rdbGatoMod.Name = "rdbGatoMod";
             this.rdbGatoMod.Size = new System.Drawing.Size(48, 17);
             this.rdbGatoMod.TabIndex = 114;
@@ -340,7 +343,7 @@
             // 
             this.rdbPerroMod.AutoSize = true;
             this.rdbPerroMod.Checked = true;
-            this.rdbPerroMod.Location = new System.Drawing.Point(88, 371);
+            this.rdbPerroMod.Location = new System.Drawing.Point(86, 378);
             this.rdbPerroMod.Name = "rdbPerroMod";
             this.rdbPerroMod.Size = new System.Drawing.Size(50, 17);
             this.rdbPerroMod.TabIndex = 113;
@@ -368,6 +371,7 @@
             // 
             // btnCancelarMod
             // 
+            this.btnCancelarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelarMod.Location = new System.Drawing.Point(141, 498);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(103, 23);
@@ -395,6 +399,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Location = new System.Drawing.Point(264, 498);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(103, 23);
@@ -405,17 +410,19 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Location = new System.Drawing.Point(373, 498);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 23);
             this.btnEliminar.TabIndex = 121;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblIDMod
             // 
             this.lblIDMod.AutoSize = true;
-            this.lblIDMod.Location = new System.Drawing.Point(107, 331);
+            this.lblIDMod.Location = new System.Drawing.Point(50, 354);
             this.lblIDMod.Name = "lblIDMod";
             this.lblIDMod.Size = new System.Drawing.Size(21, 13);
             this.lblIDMod.TabIndex = 122;
@@ -424,7 +431,7 @@
             // txtIdMod
             // 
             this.txtIdMod.Enabled = false;
-            this.txtIdMod.Location = new System.Drawing.Point(134, 327);
+            this.txtIdMod.Location = new System.Drawing.Point(91, 350);
             this.txtIdMod.Name = "txtIdMod";
             this.txtIdMod.ReadOnly = true;
             this.txtIdMod.Size = new System.Drawing.Size(34, 20);

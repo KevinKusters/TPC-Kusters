@@ -48,6 +48,9 @@
             // 
             this.dgvListaRazas.AllowUserToAddRows = false;
             this.dgvListaRazas.AllowUserToDeleteRows = false;
+            this.dgvListaRazas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaRazas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaRazas.Location = new System.Drawing.Point(267, 12);
             this.dgvListaRazas.Name = "dgvListaRazas";
@@ -113,6 +116,7 @@
             // 
             // txtnombreMod
             // 
+            this.txtnombreMod.Enabled = false;
             this.txtnombreMod.Location = new System.Drawing.Point(123, 198);
             this.txtnombreMod.Name = "txtnombreMod";
             this.txtnombreMod.Size = new System.Drawing.Size(100, 20);

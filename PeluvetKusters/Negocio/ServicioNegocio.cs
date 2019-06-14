@@ -28,6 +28,7 @@ namespace Negocio
                     servicio.id = (int)accesoDatos.Lector["ID"];
                     servicio.descripcion = accesoDatos.Lector["DESCRIPCION"].ToString();
                     servicio.precio = (decimal)accesoDatos.Lector["PRECIO"];
+                    servicio.rubro = accesoDatos.Lector["rubro"].ToString();
 
                     Listado.Add(servicio);
                 }
@@ -47,10 +48,11 @@ namespace Negocio
 
             try
             {
-                accesoDatos.setearConsulta("INSERT INTO SERVICIOS (DESCRIPCION,PRECIO,ESTADO) VALUES (@DESCRIPCION, @PRECIO, @ESTADO)");
+                accesoDatos.setearConsulta("INSERT INTO SERVICIOS (DESCRIPCION,PRECIO,RUBRO,ESTADO) VALUES (@DESCRIPCION, @PRECIO,@RUBRO, @ESTADO)");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@DESCRIPCION", nuevo.descripcion);
                 accesoDatos.Comando.Parameters.AddWithValue("@PRECIO", nuevo.precio);
+                accesoDatos.Comando.Parameters.AddWithValue("@RUBRO", nuevo.rubro);
                 accesoDatos.Comando.Parameters.AddWithValue("@ESTADO", true);
 
                 accesoDatos.abrirConexion();
@@ -68,11 +70,12 @@ namespace Negocio
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             try
             {
-                accesoDatos.setearConsulta("UPDATE SERVICIOS SET DESCRIPCION = @descripcion, PRECIO = @precio WHERE ID = @ID");
+                accesoDatos.setearConsulta("UPDATE SERVICIOS SET DESCRIPCION = @descripcion, PRECIO = @precio, RUBRO = @rubro WHERE ID = @ID");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@ID", Modificado.id);
                 accesoDatos.Comando.Parameters.AddWithValue("@descripcion", Modificado.descripcion);
                 accesoDatos.Comando.Parameters.AddWithValue("@precio", Modificado.precio);
+                accesoDatos.Comando.Parameters.AddWithValue("@rubro", Modificado.rubro);
 
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarAccion();
@@ -111,7 +114,61 @@ namespace Negocio
                 throw ex;
             }
         }
-        
+
+        public List<Servicio> ListarServiciosXRubro(string rubro)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+            List<Servicio> Listado = new List<Servicio>();
+            Servicio servicio;
+
+            try
+            {
+                accesoDatos.setearConsulta("SELECT * FROM SERVICIOS WHERE ESTADO LIKE 1 and RUBRO like @rubro");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@rubro", rubro);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarConsulta();
+
+                while (accesoDatos.Lector.Read())
+                {
+                    servicio = new Servicio();
+                    servicio.id = (int)accesoDatos.Lector["ID"];
+                    servicio.descripcion = accesoDatos.Lector["DESCRIPCION"].ToString();
+                    servicio.precio = (decimal)accesoDatos.Lector["PRECIO"];
+                    servicio.rubro = accesoDatos.Lector["RUBRO"].ToString();
+
+                    Listado.Add(servicio);
+                }
+
+                return Listado;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void eliminarServicio(Servicio eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE SERVICIOS SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", eliminado.id);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
 
     }

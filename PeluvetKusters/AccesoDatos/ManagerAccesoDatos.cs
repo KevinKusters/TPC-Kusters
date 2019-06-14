@@ -9,7 +9,7 @@ namespace AccesoDatos
 {
     public class ManagerAccesoDatos
     {
-        public static string cadenaConexion = "server=CLARIS ; database=PELUVET ; integrated security = true";
+        public static string cadenaConexion = "server=CLARIS ; database=Kusters_db ; integrated security = true";
         private SqlCommand comando;
         private SqlConnection conexion;
         private SqlDataReader lector;

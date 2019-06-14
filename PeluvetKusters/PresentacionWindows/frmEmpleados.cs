@@ -164,5 +164,22 @@ namespace PresentacionWindows
                 cargarGrilla();
             }              
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Empleado eliminar = new Empleado();
+            EmpleadoNegocio negocio = new EmpleadoNegocio();
+            eliminar = (Empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+
+            if (eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar un empleado de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarEmpleado(eliminar);
+                cargarGrilla();
+            }
+        }
     }
 }

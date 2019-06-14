@@ -8,10 +8,15 @@ namespace Dominio
 {
     public class Venta
     {
-        public int idVenta { get; set; }
-        public int costo { get; set; }
-        public DateTime fecha;
-        public bool estado { get; set;}
-        Cliente client;
+        public int IdVenta { get; set; }
+        public decimal Costo { get; set; }        
+        public decimal PrecioVenta { get; set; }
+        public int cantidad { get; set; }
+        public DateTime Fecha;
+        public bool estado { get; set;}        
+        public Producto producto;
+
+        public string Producto { get { return producto.descripcion; } }
+        public DateTime FechaVenta { get { return Fecha; } }
     }
 }

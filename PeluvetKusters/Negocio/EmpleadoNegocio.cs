@@ -138,7 +138,25 @@ namespace Negocio
             }
         }
 
+        public void eliminarEmpleado(Empleado eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
 
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE EMPLEADOS SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", eliminado.id);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
     }
 }

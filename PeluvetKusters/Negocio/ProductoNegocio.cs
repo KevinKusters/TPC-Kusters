@@ -126,8 +126,28 @@ namespace Negocio
             {
                 throw ex;
             }
-
         }
+
+
+        public void eliminarProducto(Producto eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE PRODUCTOS SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", eliminado.idProducto);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }    
     }
 }
 

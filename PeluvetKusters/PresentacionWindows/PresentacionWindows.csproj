@@ -70,6 +70,12 @@
     <Compile Include="frmAgregarTurno.Designer.cs">
       <DependentUpon>frmAgregarTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="frmEmpleados.Designer.cs">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGanancias.Designer.cs">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaMascotas.cs">
       <SubType>Form</SubType>
@@ -136,6 +148,18 @@
     <Compile Include="frmPuestos.Designer.cs">
       <DependentUpon>frmPuestos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerVentas.Designer.cs">
+      <DependentUpon>frmVerVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarCliente.resx">
@@ -150,11 +174,17 @@
     <EmbeddedResource Include="frmAgregarTurno.resx">
       <DependentUpon>frmAgregarTurno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarMascota.resx">
       <DependentUpon>frmBuscarMascota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmpleados.resx">
       <DependentUpon>frmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGanancias.resx">
+      <DependentUpon>frmGanancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaMascotas.resx">
       <DependentUpon>frmListaMascotas.cs</DependentUpon>
@@ -182,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPuestos.resx">
       <DependentUpon>frmPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerVentas.resx">
+      <DependentUpon>frmVerVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

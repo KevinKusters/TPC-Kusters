@@ -17,7 +17,7 @@ namespace PresentacionWindows
     {
         frmListarCliente cliente;
         frmBuscarMascota mascota;
-        List<Empleado> ListaLocalEmpleados;
+        List<Empleado> ListaLocalEmpleados;      
 
         public frmAgregarTurno()
         {            
@@ -58,24 +58,32 @@ namespace PresentacionWindows
 
         private void cargarServicios()
         {
-            ServicioNegocio negocio = new ServicioNegocio();
-            Servicio aux = new Servicio();            
 
-            cbmservicio.DataSource = negocio.ListarServicios();
-            cbmservicio.DisplayMember = "Descripcion";
-            cbmservicio.ValueMember = "id";
-
-            aux = (Servicio)cbmservicio.SelectedItem;
-            
-            if(aux == null)
+            if(rdbPeluqueria.Checked==true)
             {
-                MessageBox.Show("Asegurese de haber configurado todos los campos antes de cargar turnos","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);                
+                ServicioNegocio negocio = new ServicioNegocio();
+                Servicio aux = new Servicio();
+
+                cbmservicio.DataSource = negocio.ListarServiciosXRubro(rdbPeluqueria.Text);
+                cbmservicio.DisplayMember = "Descripcion";
+                cbmservicio.ValueMember = "id";
+
+                aux = (Servicio)cbmservicio.SelectedItem;
+                txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
             }
             else
             {
+
+                ServicioNegocio negocio = new ServicioNegocio();
+                Servicio aux = new Servicio();
+
+                cbmservicio.DataSource = negocio.ListarServiciosXRubro(rdbVeterinaria.Text);
+                cbmservicio.DisplayMember = "Descripcion";
+                cbmservicio.ValueMember = "id";
+
+                aux = (Servicio)cbmservicio.SelectedItem;
                 txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
-            }
-           
+            }          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,21 +141,36 @@ namespace PresentacionWindows
         }
 
         private void DtpFecha_ValueChanged(object sender, EventArgs e)
-        {
+        {          
             txtFechaTurno.Text = DtpFecha.Value.ToShortDateString();
-            txtHora.Text = DtpFecha.Value.ToShortTimeString();
+            txtHora.Text = DtpFecha.Value.ToShortTimeString();                   
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            bool flag;
+            TurnoNegocio negocio = new TurnoNegocio();
+            Empleado empleado = new Empleado();
+
+            empleado = (Empleado)dgvempleados.CurrentRow.DataBoundItem;
+
+            flag=negocio.VerificarHora(txtHora.Text,empleado.id,txtFechaTurno.Text);
+
+
             if(txtapellidocli.Text == "" || txtnombrecli.Text == "" || txtnombremasc.Text==""|| txtEspecie.Text == "" || txtapellidomasc.Text == "" || txtraza.Text == "" || txtHora.Text=="" || txtHora.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if(flag == true)
+            {
+                lblAviso.Show();                                                                                         
+            }
             else
             {
-                Turno nuevo = new Turno();
-                TurnoNegocio negocio = new TurnoNegocio();
+                lblAviso.Visible = false;
+                int aux2;
+
+                Turno nuevo = new Turno();           
                 Empleado aux = new Empleado();
                 nuevo.cliente = new Cliente();
                 nuevo.animal = new Animal();
@@ -160,10 +183,20 @@ namespace PresentacionWindows
                 nuevo.animal.id = int.Parse(txtIDmascota.Text);
                 nuevo.empleado.id = aux.id;
                 nuevo.servicio.id = (int)cbmservicio.SelectedValue;
-                nuevo.fecha = DateTime.Parse(txtFechaTurno.Text);
-                nuevo.hora = DateTime.Parse(txtHora.Text);
+                nuevo.fecha =txtFechaTurno.Text;
+                nuevo.hora = txtHora.Text;
 
                 negocio.cargarTurno(nuevo);
+                aux2 = negocio.DevolverUltimoID();
+
+                if(rdbPeluqueria.Checked == true)
+                {
+                    negocio.CargarHorasTomadasPeluqueria(txtHora.Text,txtFechaTurno.Text, aux,aux2);
+                }
+                if (rdbVeterinaria.Checked == true)
+                {
+                    negocio.CargarHorasTomadasVeterinaria(txtHora.Text, txtFechaTurno.Text, aux,aux2);
+                }             
 
                 MessageBox.Show("Turno guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -172,11 +205,23 @@ namespace PresentacionWindows
         private void rdbVeterinaria_CheckedChanged(object sender, EventArgs e)
         {
             cargarListaEmpleados();
+            cargarServicios();
         }
 
         private void rdbPeluqueria_CheckedChanged(object sender, EventArgs e)
         {
             cargarListaEmpleados();
+            cargarServicios();
+        }
+
+        private void txtHora_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -30,6 +30,8 @@ namespace PresentacionWindows
 
             dgvServicios.DataSource = negocio.ListarServicios();
             dgvServicios.Columns[0].Visible = false;
+            dgvServicios.Columns[3].Visible = false;
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -44,8 +46,17 @@ namespace PresentacionWindows
                 Servicio nuevo = new Servicio();
                 ServicioNegocio negocio = new ServicioNegocio();
 
-                nuevo.descripcion = txtDescripcionAlta.Text;
+                nuevo.descripcion = txtDescripcionAlta.Text;                
                 nuevo.precio = decimal.Parse(txtPrecioAlta.Text);
+
+                if (rdbPeluqueria.Checked == true)
+                {
+                    nuevo.rubro = rdbPeluqueria.Text;
+                }
+                else
+                {
+                    nuevo.rubro = rdbVeterinaria.Text;
+                }
 
                 negocio.agregarServicio(nuevo);
                 cargarGrilla();
@@ -63,8 +74,20 @@ namespace PresentacionWindows
             txtDescripcionMod.Text = modificar.descripcion;
             txtPrecioMod.Text = modificar.precio.ToString();
 
+            if (modificar.rubro == "Peluqueria")
+            {
+                rdbPeluqueriaMod.Checked = true;
+            }
+            else
+            {
+                rdbVeterinariaMod.Checked = true;
+            }
+
+
             txtDescripcionMod.Enabled = true;
             txtPrecioMod.Enabled = true;
+            rdbPeluqueriaMod.Enabled = true;
+            rdbVeterinariaMod.Enabled = true;
         }
 
         private void btnAceptarMod_Click(object sender, EventArgs e)
@@ -75,6 +98,15 @@ namespace PresentacionWindows
             modificado.id = int.Parse(txtIdMod.Text);
             modificado.descripcion = txtDescripcionMod.Text;
             modificado.precio = decimal.Parse(txtPrecioMod.Text);
+
+            if(rdbPeluqueriaMod.Checked == true)
+            {
+                modificado.rubro = rdbPeluqueriaMod.Text;
+            }
+            else
+            {
+                modificado.rubro = rdbVeterinariaMod.Text;
+            }
 
             negocio.ModificarServicio(modificado);
 
@@ -90,6 +122,24 @@ namespace PresentacionWindows
         private void btnCancelarMod_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Servicio eliminar = new Servicio();
+            ServicioNegocio negocio = new ServicioNegocio();
+
+            eliminar = (Servicio)dgvServicios.CurrentRow.DataBoundItem;
+
+            if(eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar un servicio de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarServicio(eliminar);
+                cargarGrilla();
+            }
         }
     }
 }

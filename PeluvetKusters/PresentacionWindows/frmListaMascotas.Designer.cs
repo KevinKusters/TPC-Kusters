@@ -80,6 +80,7 @@
             // 
             // txtapellido
             // 
+            this.txtapellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtapellido.Location = new System.Drawing.Point(428, 22);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.ReadOnly = true;
@@ -98,6 +99,7 @@
             // 
             // txtnombre
             // 
+            this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtnombre.Location = new System.Drawing.Point(232, 22);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.ReadOnly = true;

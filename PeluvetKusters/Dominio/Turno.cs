@@ -10,11 +10,23 @@ namespace Dominio
 
         public int id;
         public bool estado { get; set; }
+        public bool  realizado { get; set; }
         public Cliente cliente;
         public Animal animal;
         public Empleado empleado;
         public Servicio servicio;
-        public DateTime fecha { get; set; }
-        public DateTime hora { get; set; }
+        public string fecha { get; set; }
+        public string hora { get; set; }
+        
+
+        public string NombreCliente { get { return cliente.nombre; } }
+        public string ApellidoCliente { get { return cliente.apellido; } }
+        public string NombreMascota { get { return animal.nombre; } }
+        public string Raza { get { return animal.raza.nombre; } }
+        public string Especie { get { return animal.especie; } }
+        public string NombreEmpleado { get { return empleado.nombre; } }
+        public string ApellidoEmpleado { get { return empleado.apellido; } }
+        public string Servicio { get { return servicio.descripcion; } }
+        public decimal Precio { get { return servicio.precio; } }
     }
 }

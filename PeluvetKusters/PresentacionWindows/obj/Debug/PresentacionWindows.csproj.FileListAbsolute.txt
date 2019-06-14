@@ -32,3 +32,7 @@ D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\Pr
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmListaMascotas.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAgregarServicios.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmBuscarMascota.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmVentas.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmVerVentas.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmGanancias.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAyuda.resources

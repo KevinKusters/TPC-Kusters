@@ -46,21 +46,27 @@
             this.btnCancelarMod = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.rdbPeluqueria = new System.Windows.Forms.RadioButton();
+            this.rdbVeterinaria = new System.Windows.Forms.RadioButton();
+            this.lblrubro = new System.Windows.Forms.Label();
+            this.rdbVeterinariaMod = new System.Windows.Forms.RadioButton();
+            this.rdbPeluqueriaMod = new System.Windows.Forms.RadioButton();
+            this.lblRubroMod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvServicios
             // 
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServicios.Location = new System.Drawing.Point(217, 9);
+            this.dgvServicios.Location = new System.Drawing.Point(205, 12);
             this.dgvServicios.Name = "dgvServicios";
-            this.dgvServicios.Size = new System.Drawing.Size(240, 280);
+            this.dgvServicios.Size = new System.Drawing.Size(240, 384);
             this.dgvServicios.TabIndex = 2;
             // 
             // lblNombreAlta
             // 
             this.lblNombreAlta.AutoSize = true;
-            this.lblNombreAlta.Location = new System.Drawing.Point(22, 52);
+            this.lblNombreAlta.Location = new System.Drawing.Point(15, 52);
             this.lblNombreAlta.Name = "lblNombreAlta";
             this.lblNombreAlta.Size = new System.Drawing.Size(66, 13);
             this.lblNombreAlta.TabIndex = 3;
@@ -70,7 +76,7 @@
             // lblPrecioAlta
             // 
             this.lblPrecioAlta.AutoSize = true;
-            this.lblPrecioAlta.Location = new System.Drawing.Point(48, 84);
+            this.lblPrecioAlta.Location = new System.Drawing.Point(41, 84);
             this.lblPrecioAlta.Name = "lblPrecioAlta";
             this.lblPrecioAlta.Size = new System.Drawing.Size(40, 13);
             this.lblPrecioAlta.TabIndex = 4;
@@ -79,7 +85,7 @@
             // lblIdMod
             // 
             this.lblIdMod.AutoSize = true;
-            this.lblIdMod.Location = new System.Drawing.Point(67, 198);
+            this.lblIdMod.Location = new System.Drawing.Point(60, 262);
             this.lblIdMod.Name = "lblIdMod";
             this.lblIdMod.Size = new System.Drawing.Size(21, 13);
             this.lblIdMod.TabIndex = 5;
@@ -88,7 +94,7 @@
             // lblDescripcionMod
             // 
             this.lblDescripcionMod.AutoSize = true;
-            this.lblDescripcionMod.Location = new System.Drawing.Point(22, 228);
+            this.lblDescripcionMod.Location = new System.Drawing.Point(15, 292);
             this.lblDescripcionMod.Name = "lblDescripcionMod";
             this.lblDescripcionMod.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcionMod.TabIndex = 6;
@@ -97,7 +103,7 @@
             // lblPrecioMod
             // 
             this.lblPrecioMod.AutoSize = true;
-            this.lblPrecioMod.Location = new System.Drawing.Point(48, 254);
+            this.lblPrecioMod.Location = new System.Drawing.Point(41, 318);
             this.lblPrecioMod.Name = "lblPrecioMod";
             this.lblPrecioMod.Size = new System.Drawing.Size(40, 13);
             this.lblPrecioMod.TabIndex = 7;
@@ -107,7 +113,7 @@
             // 
             this.lblTituloMod.AutoSize = true;
             this.lblTituloMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloMod.Location = new System.Drawing.Point(12, 154);
+            this.lblTituloMod.Location = new System.Drawing.Point(11, 218);
             this.lblTituloMod.Name = "lblTituloMod";
             this.lblTituloMod.Size = new System.Drawing.Size(176, 24);
             this.lblTituloMod.TabIndex = 8;
@@ -115,14 +121,14 @@
             // 
             // txtDescripcionAlta
             // 
-            this.txtDescripcionAlta.Location = new System.Drawing.Point(94, 49);
+            this.txtDescripcionAlta.Location = new System.Drawing.Point(87, 49);
             this.txtDescripcionAlta.Name = "txtDescripcionAlta";
             this.txtDescripcionAlta.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcionAlta.TabIndex = 9;
             // 
             // txtPrecioAlta
             // 
-            this.txtPrecioAlta.Location = new System.Drawing.Point(94, 84);
+            this.txtPrecioAlta.Location = new System.Drawing.Point(87, 84);
             this.txtPrecioAlta.Name = "txtPrecioAlta";
             this.txtPrecioAlta.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioAlta.TabIndex = 10;
@@ -130,7 +136,7 @@
             // txtIdMod
             // 
             this.txtIdMod.Enabled = false;
-            this.txtIdMod.Location = new System.Drawing.Point(94, 198);
+            this.txtIdMod.Location = new System.Drawing.Point(87, 262);
             this.txtIdMod.Name = "txtIdMod";
             this.txtIdMod.Size = new System.Drawing.Size(100, 20);
             this.txtIdMod.TabIndex = 11;
@@ -138,7 +144,7 @@
             // txtDescripcionMod
             // 
             this.txtDescripcionMod.Enabled = false;
-            this.txtDescripcionMod.Location = new System.Drawing.Point(94, 225);
+            this.txtDescripcionMod.Location = new System.Drawing.Point(87, 289);
             this.txtDescripcionMod.Name = "txtDescripcionMod";
             this.txtDescripcionMod.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcionMod.TabIndex = 12;
@@ -146,7 +152,7 @@
             // txtPrecioMod
             // 
             this.txtPrecioMod.Enabled = false;
-            this.txtPrecioMod.Location = new System.Drawing.Point(94, 251);
+            this.txtPrecioMod.Location = new System.Drawing.Point(87, 315);
             this.txtPrecioMod.Name = "txtPrecioMod";
             this.txtPrecioMod.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioMod.TabIndex = 13;
@@ -163,7 +169,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(119, 110);
+            this.btnAgregar.Location = new System.Drawing.Point(33, 181);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 15;
@@ -173,7 +179,7 @@
             // 
             // btnAceptarMod
             // 
-            this.btnAceptarMod.Location = new System.Drawing.Point(34, 295);
+            this.btnAceptarMod.Location = new System.Drawing.Point(33, 414);
             this.btnAceptarMod.Name = "btnAceptarMod";
             this.btnAceptarMod.Size = new System.Drawing.Size(75, 23);
             this.btnAceptarMod.TabIndex = 16;
@@ -183,7 +189,7 @@
             // 
             // btnCancelarMod
             // 
-            this.btnCancelarMod.Location = new System.Drawing.Point(116, 295);
+            this.btnCancelarMod.Location = new System.Drawing.Point(115, 414);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMod.TabIndex = 17;
@@ -193,7 +199,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(217, 295);
+            this.btnModificar.Location = new System.Drawing.Point(205, 414);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 18;
@@ -203,18 +209,89 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(298, 295);
+            this.btnEliminar.Location = new System.Drawing.Point(286, 414);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // rdbPeluqueria
+            // 
+            this.rdbPeluqueria.AutoSize = true;
+            this.rdbPeluqueria.Location = new System.Drawing.Point(92, 120);
+            this.rdbPeluqueria.Name = "rdbPeluqueria";
+            this.rdbPeluqueria.Size = new System.Drawing.Size(75, 17);
+            this.rdbPeluqueria.TabIndex = 20;
+            this.rdbPeluqueria.TabStop = true;
+            this.rdbPeluqueria.Text = "Peluqueria";
+            this.rdbPeluqueria.UseVisualStyleBackColor = true;
+            // 
+            // rdbVeterinaria
+            // 
+            this.rdbVeterinaria.AutoSize = true;
+            this.rdbVeterinaria.Location = new System.Drawing.Point(92, 143);
+            this.rdbVeterinaria.Name = "rdbVeterinaria";
+            this.rdbVeterinaria.Size = new System.Drawing.Size(75, 17);
+            this.rdbVeterinaria.TabIndex = 21;
+            this.rdbVeterinaria.TabStop = true;
+            this.rdbVeterinaria.Text = "Veterinaria";
+            this.rdbVeterinaria.UseVisualStyleBackColor = true;
+            // 
+            // lblrubro
+            // 
+            this.lblrubro.AutoSize = true;
+            this.lblrubro.Location = new System.Drawing.Point(42, 122);
+            this.lblrubro.Name = "lblrubro";
+            this.lblrubro.Size = new System.Drawing.Size(39, 13);
+            this.lblrubro.TabIndex = 22;
+            this.lblrubro.Text = "Rubro:";
+            // 
+            // rdbVeterinariaMod
+            // 
+            this.rdbVeterinariaMod.AutoSize = true;
+            this.rdbVeterinariaMod.Enabled = false;
+            this.rdbVeterinariaMod.Location = new System.Drawing.Point(87, 379);
+            this.rdbVeterinariaMod.Name = "rdbVeterinariaMod";
+            this.rdbVeterinariaMod.Size = new System.Drawing.Size(75, 17);
+            this.rdbVeterinariaMod.TabIndex = 24;
+            this.rdbVeterinariaMod.TabStop = true;
+            this.rdbVeterinariaMod.Text = "Veterinaria";
+            this.rdbVeterinariaMod.UseVisualStyleBackColor = true;
+            // 
+            // rdbPeluqueriaMod
+            // 
+            this.rdbPeluqueriaMod.AutoSize = true;
+            this.rdbPeluqueriaMod.Enabled = false;
+            this.rdbPeluqueriaMod.Location = new System.Drawing.Point(87, 356);
+            this.rdbPeluqueriaMod.Name = "rdbPeluqueriaMod";
+            this.rdbPeluqueriaMod.Size = new System.Drawing.Size(75, 17);
+            this.rdbPeluqueriaMod.TabIndex = 23;
+            this.rdbPeluqueriaMod.TabStop = true;
+            this.rdbPeluqueriaMod.Text = "Peluqueria";
+            this.rdbPeluqueriaMod.UseVisualStyleBackColor = true;
+            // 
+            // lblRubroMod
+            // 
+            this.lblRubroMod.AutoSize = true;
+            this.lblRubroMod.Location = new System.Drawing.Point(44, 350);
+            this.lblRubroMod.Name = "lblRubroMod";
+            this.lblRubroMod.Size = new System.Drawing.Size(39, 13);
+            this.lblRubroMod.TabIndex = 25;
+            this.lblRubroMod.Text = "Rubro:";
             // 
             // frmAgregarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 332);
+            this.ClientSize = new System.Drawing.Size(458, 462);
+            this.Controls.Add(this.lblRubroMod);
+            this.Controls.Add(this.rdbVeterinariaMod);
+            this.Controls.Add(this.rdbPeluqueriaMod);
+            this.Controls.Add(this.lblrubro);
+            this.Controls.Add(this.rdbVeterinaria);
+            this.Controls.Add(this.rdbPeluqueria);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelarMod);
@@ -261,5 +338,11 @@
         private System.Windows.Forms.Button btnCancelarMod;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.RadioButton rdbPeluqueria;
+        private System.Windows.Forms.RadioButton rdbVeterinaria;
+        private System.Windows.Forms.Label lblrubro;
+        private System.Windows.Forms.RadioButton rdbVeterinariaMod;
+        private System.Windows.Forms.RadioButton rdbPeluqueriaMod;
+        private System.Windows.Forms.Label lblRubroMod;
     }
 }

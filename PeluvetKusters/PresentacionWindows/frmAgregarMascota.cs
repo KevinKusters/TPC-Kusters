@@ -143,6 +143,7 @@ namespace PresentacionWindows
 
             txtIdMod.Text = modificar.id.ToString();
             txtNombreMod.Text = modificar.nombre;
+            cmbrazaMod.SelectedIndex = modificar.raza.id;
 
             if(modificar.especie == "Perro")
             {
@@ -266,6 +267,24 @@ namespace PresentacionWindows
             rdbPerroMod.Checked = true;
 
             DisableTxt();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Animal eliminar = new Animal();
+            AnimalNegocio negocio = new AnimalNegocio();
+
+            eliminar = (Animal)dgvMascotas.CurrentRow.DataBoundItem;
+
+            if(eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar un animal de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarAnimal(eliminar);
+                cargarGrilla();
+            }         
         }
     }
 }

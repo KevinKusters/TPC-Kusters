@@ -12,8 +12,7 @@ namespace PresentacionWindows
 {
     public partial class frmPrincipal : Form
     {
-        frmAgregarCliente agregarCliente;
-        frmAgregarTurno agregarTurno;
+        frmAgregarCliente agregarCliente;       
         frmListarCliente listarCliente;
         frmListarTurno listarTurno;
         frmListaRazas listaraza;
@@ -23,6 +22,8 @@ namespace PresentacionWindows
         frmEmpleados empleados;
         frmPuestos puestos;
         frmAgregarServicios servicios;
+        frmVerVentas ventas;
+        frmAyuda ayuda;
 
         public frmPrincipal()
         {
@@ -32,24 +33,7 @@ namespace PresentacionWindows
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void agregarTurnoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (agregarTurno == null)
-            {
-                agregarTurno = new frmAgregarTurno();
-                agregarTurno.MdiParent = this;
-                agregarTurno.FormClosed += new FormClosedEventHandler(turn_FormClosed);
-                agregarTurno.Show();
-
-            }
-        }
-
-        void turn_FormClosed(object sender, EventArgs e)
-        {
-            agregarTurno = null;
-        }
+        }     
 
         private void verTurnosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -220,6 +204,39 @@ namespace PresentacionWindows
         private void ServiciosFormClosed(object sender, EventArgs e)
         {
             servicios = null;
+        }
+
+        private void nuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(ventas == null)
+            {
+                ventas = new frmVerVentas();
+                ventas.MdiParent = this.MdiParent;
+                ventas.FormClosed += new FormClosedEventHandler(VentasFormClosed);
+                ventas.Show();
+            }
+        }
+
+        private void VentasFormClosed(object sender, EventArgs e)
+        {
+            ventas = null;
+        }
+
+        private void comoConfigurarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(ayuda == null)
+            {
+                ayuda = new frmAyuda();
+
+                ayuda.MdiParent = this.MdiParent;
+                ayuda.FormClosed += new FormClosedEventHandler(AyudaFormClosed);
+                ayuda.Show();                
+            }
+        }
+
+        private void AyudaFormClosed(object sender, EventArgs e)
+        {
+            ayuda = null;
         }
     }
 }

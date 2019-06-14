@@ -12,6 +12,7 @@ namespace Dominio
         public string descripcion { get; set; }
         public decimal precio { get; set; }
         public bool estado { get; set; }
+        public string rubro { get; set; }
     }
 }
 

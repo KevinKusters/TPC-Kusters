@@ -71,7 +71,29 @@ namespace Negocio
             }
 
         }
-   
 
+        public void ModificarCliente(Cliente modificado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE CLIENTES SET NOMBRE = @nombre, APELLIDO = @apellido, CONTACTO = @contacto, LOCALIDAD = @localidad WHERE ID LIKE @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@nombre", modificado.nombre);
+                accesoDatos.Comando.Parameters.AddWithValue("@apellido", modificado.apellido);
+                accesoDatos.Comando.Parameters.AddWithValue("@contacto", modificado.contacto);
+                accesoDatos.Comando.Parameters.AddWithValue("@localidad", modificado.localidad.id);
+                accesoDatos.Comando.Parameters.AddWithValue("@ID", modificado.id);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
+

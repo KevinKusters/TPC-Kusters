@@ -19,7 +19,8 @@ namespace PresentacionWindows
 
         public frmAgregarCliente()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            cargarGrilla();
         }
 
         private void cargarGrilla()
@@ -39,10 +40,14 @@ namespace PresentacionWindows
             LocalidadNegocio negocio = new LocalidadNegocio();        
 
             cmbLocalidades.DataSource = negocio.ListarLocalidades();
-            cmbLocalidades.DisplayMember = "nombre";
-            cmbLocalidades.ValueMember = "id";         
+            cmbLocalidadMod.DataSource = negocio.ListarLocalidades();
 
-            cargarGrilla();
+            cmbLocalidades.DisplayMember = "nombre";
+            cmbLocalidades.ValueMember = "id";
+
+            cmbLocalidadMod.DisplayMember = "nombre";
+            cmbLocalidadMod.ValueMember = "id";
+           
         }
 
         private void cmbLocalidades_SelectedIndexChanged(object sender, EventArgs e)
@@ -80,8 +85,7 @@ namespace PresentacionWindows
             cliente.localidad = (Localidad)cmbLocalidades.SelectedItem;
 
             negocio.agregarCliente(cliente);
-
-            MessageBox.Show("Cliente agregado", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            
             cargarGrilla();            
         }
 
@@ -92,5 +96,80 @@ namespace PresentacionWindows
             txtContacto.Text = "";
             cmbLocalidades.SelectedIndex = 0;
         }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            Cliente modificar = new Cliente();
+            ClienteNegocio negocio = new ClienteNegocio();
+
+            modificar = (Cliente)dgbAgregarCliente.CurrentRow.DataBoundItem;
+            txtIdMod.Text = modificar.id.ToString();
+            txtNombreMod.Text = modificar.nombre;
+            txtApellidoMod.Text = modificar.apellido;
+            txtContactoMod.Text = modificar.contacto;
+
+            cmbLocalidadMod.SelectedIndex = modificar.localidad.id-1;
+            enabletxt();
+        }
+
+
+
+        private void enabletxt()
+         {
+            txtNombreMod.Enabled = true;
+            txtApellidoMod.Enabled = true;
+            txtContactoMod.Enabled = true;
+            cmbLocalidadMod.Enabled = true;
+         }
+
+        private void disabletxt()
+        {
+            txtNombreMod.Enabled = false;
+            txtApellidoMod.Enabled = false;
+            txtContactoMod.Enabled = false;
+            cmbLocalidadMod.Enabled = false;
+        }
+
+        private void btnAceptarMod_Click(object sender, EventArgs e)
+        {
+            if(txtNombreMod.Text=="" || txtApellidoCli.Text == "" || txtContacto.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                ClienteNegocio negocio = new ClienteNegocio();
+                Cliente modificado = new Cliente();
+
+                modificado.id = int.Parse(txtIdMod.Text);
+                modificado.nombre = txtNombreMod.Text;
+                modificado.apellido = txtApellidoMod.Text;
+                modificado.localidad = (Localidad)cmbLocalidadMod.SelectedItem;
+
+                negocio.ModificarCliente(modificado);
+
+                txtIdMod.Text = "";
+                txtNombreMod.Text = "";
+                txtApellidoMod.Text = "";
+                txtContactoMod.Text = "";
+                cmbLocalidadMod.SelectedText = "";
+
+                disabletxt();
+                cargarGrilla();
+            }
+        }
+
+        private void btnCancelarMod_Click(object sender, EventArgs e)
+        {
+            txtIdMod.Text = "";
+            txtNombreMod.Text = "";
+            txtApellidoMod.Text = "";
+            txtContactoMod.Text = "";
+            cmbLocalidadMod.SelectedText = "";
+
+            disabletxt();
+        }
     }
+
+    
 }

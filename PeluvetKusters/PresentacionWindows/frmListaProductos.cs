@@ -204,6 +204,24 @@ namespace PresentacionWindows
 
             Disabletxt();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Producto eliminar = new Producto();
+            ProductoNegocio negocio = new ProductoNegocio();
+
+            eliminar = (Producto)dgvListaProd.CurrentRow.DataBoundItem;
+
+            if (eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar un servicio de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarProducto(eliminar);
+                cargarGrilla();
+            }
+        }
     }
 }
 

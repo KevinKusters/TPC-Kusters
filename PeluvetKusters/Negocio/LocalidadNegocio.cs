@@ -18,7 +18,7 @@ namespace Negocio
             Localidad Loc;
             try
             {
-                accesoDatos.setearConsulta("select * from LOCALIDADES");
+                accesoDatos.setearConsulta("select * from LOCALIDADES WHERE ESTAD LIKE 1");
                 accesoDatos.abrirConexion();
                 accesoDatos.ejecutarConsulta();
 
@@ -82,7 +82,24 @@ namespace Negocio
         }
 
 
+        public void eliminarLocalidad(Localidad eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
 
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE LOCALIDADES SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", eliminado.id);
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
     }
 }

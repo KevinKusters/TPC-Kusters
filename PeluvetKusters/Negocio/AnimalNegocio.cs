@@ -78,7 +78,7 @@ namespace Negocio
             try
             {
                 //accesoDatos.setearConsulta("select distinct a.nombre,a.apellido,a.especie,r.nombre as Raza from animales as a inner join razas as r on r.id = a.idraza inner join clientes as cli on cli.id = a.idcliente inner join animalesxCliente as axc on axc.idcliente = @idCLIENTE ");
-                accesoDatos.setearConsulta("SELECT DISTINCT A.ID, A.NOMBRE, A.APELLIDO,A.ESPECIE,R.NOMBRE AS RAZA FROM ANIMALESXCLIENTE AS AXC INNER JOIN CLIENTES AS CLI ON CLI.ID = AXC.IDCLIENTE INNER JOIN ANIMALES AS A ON A.ID = AXC.IDANIMAL INNER JOIN RAZAS AS R ON R.ID = A.IDRAZA WHERE AXC.IDCLIENTE LIKE @idCLIENTE");
+                accesoDatos.setearConsulta("SELECT DISTINCT A.ID, A.NOMBRE, A.APELLIDO,A.ESPECIE,R.NOMBRE AS RAZA FROM ANIMALESXCLIENTE AS AXC INNER JOIN CLIENTES AS CLI ON CLI.ID = AXC.IDCLIENTE INNER JOIN ANIMALES AS A ON A.ID = AXC.IDANIMAL INNER JOIN RAZAS AS R ON R.ID = A.IDRAZA WHERE A.ESTADO LIKE 1 AND AXC.IDCLIENTE LIKE @idCLIENTE");
 ;                accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@idCLIENTE", idcliente);
 
@@ -95,6 +95,7 @@ namespace Negocio
                     animal.especie = accesoDatos.Lector["especie"].ToString();
                     animal.raza = new Raza();
                     animal.raza.nombre = accesoDatos.Lector["Raza"].ToString();
+                    animal.raza.id = (int)accesoDatos.Lector["ID"];
 
                     Listado.Add(animal);
                 }
@@ -179,13 +180,24 @@ namespace Negocio
         }
 
 
+        public void eliminarAnimal(Animal eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
 
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE ANIMALES SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id",eliminado.id);
 
-
-
-
-
-
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

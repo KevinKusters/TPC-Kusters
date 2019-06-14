@@ -32,8 +32,13 @@ namespace Negocio
                     Prov.Telefono = AccesoDatos.Lector["telefono"].ToString();
                     Prov.id = (int)AccesoDatos.Lector["idperjuridica"];
                     Prov.razonSocial = AccesoDatos.Lector["Razonsocial"].ToString();
-                    Prov.cuit = (Int64)AccesoDatos.Lector["cuit_empresa"];                    
+                    Prov.cuit = (Int64)AccesoDatos.Lector["cuit_empresa"];
 
+                    if (!Convert.IsDBNull(AccesoDatos.Lector["email"]))
+                    {
+                        Prov.contacto =AccesoDatos.Lector.GetString(2);
+                    }
+                        
                     listado.Add(Prov);
                 }
                     

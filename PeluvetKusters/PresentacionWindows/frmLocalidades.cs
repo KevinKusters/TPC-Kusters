@@ -41,8 +41,7 @@ namespace PresentacionWindows
 
                 nueva.nombre = txtNombreLoc.Text;
                 negocio.AgregarLocalidad(nueva);
-
-                MessageBox.Show("Localidad Agregada!", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
                 cargar_grilla();
             }
         }
@@ -72,8 +71,33 @@ namespace PresentacionWindows
             txtNombreMod.Text = "";
             txtNombreMod.Enabled = false;
             
-            MessageBox.Show("Localidad Modificada", "MENSAJE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Localidad Modificada", "MENSAJE", MessageBoxButtons.OK);
             cargar_grilla();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtNombreMod.Text = "";
+
+            txtNombreMod.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Localidad eliminar = new Localidad();
+            LocalidadNegocio negocio = new LocalidadNegocio();
+            eliminar = (Localidad)dgvLocalidades.CurrentRow.DataBoundItem;
+
+            if (eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar una localidad de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarLocalidad(eliminar);
+                cargar_grilla();
+            }
         }
     }
 }

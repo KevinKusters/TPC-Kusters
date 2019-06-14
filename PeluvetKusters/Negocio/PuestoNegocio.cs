@@ -79,7 +79,24 @@ namespace Negocio
         }
 
 
+        public void eliminarPuesto(Puesto eliminado)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
 
+            try
+            {
+                accesoDatos.setearConsulta("UPDATE PUESTOS SET ESTADO = 0 WHERE id = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", eliminado.Id);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 

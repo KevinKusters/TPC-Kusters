@@ -49,6 +49,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="GananciasXMes.cs" />
     <Compile Include="Localidad.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="PersonaJuridica.cs" />

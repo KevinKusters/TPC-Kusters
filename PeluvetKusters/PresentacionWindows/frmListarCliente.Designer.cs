@@ -42,6 +42,9 @@
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(12, 104);
             this.dgvClientes.Name = "dgvClientes";
@@ -79,6 +82,7 @@
             // 
             // btnVerMascotas
             // 
+            this.btnVerMascotas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVerMascotas.Location = new System.Drawing.Point(12, 445);
             this.btnVerMascotas.Name = "btnVerMascotas";
             this.btnVerMascotas.Size = new System.Drawing.Size(105, 23);
@@ -89,6 +93,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAgregar.Location = new System.Drawing.Point(12, 445);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(103, 23);
@@ -99,6 +104,7 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCerrar.Location = new System.Drawing.Point(124, 445);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);

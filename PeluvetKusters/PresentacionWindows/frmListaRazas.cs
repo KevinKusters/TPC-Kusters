@@ -63,7 +63,7 @@ namespace PresentacionWindows
                     agregar.nombre = txtNombreAgr.Text;
                     agregar.estado = true;
                     agregarnuevo.AgregarRaza(agregar);
-                    MessageBox.Show("Raza agregada", "Mesnaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                   
                     cargarGrilla();
                 }
                 catch (Exception ex)
@@ -80,7 +80,8 @@ namespace PresentacionWindows
                 Raza modificar;
                 modificar = (Raza)dgvListaRazas.CurrentRow.DataBoundItem;
                 txtIdRaza.Text = modificar.id.ToString();
-                txtnombreMod.Text = modificar.nombre;              
+                txtnombreMod.Text = modificar.nombre;
+                txtnombreMod.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -104,10 +105,11 @@ namespace PresentacionWindows
                     modificada.id = int.Parse(txtIdRaza.Text);
                     modificada.nombre = txtnombreMod.Text;
                     ModNegocio.modificarRaza(modificada);                   
-                    MessageBox.Show("Raza Modificada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Raza Modificada", "Mensaje", MessageBoxButtons.OK);
 
                     txtIdRaza.Text = "";
                     txtnombreMod.Text = "";
+                    txtnombreMod.Enabled = false;
 
                     cargarGrilla();
                 }

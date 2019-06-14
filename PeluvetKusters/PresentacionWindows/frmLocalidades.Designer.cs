@@ -40,6 +40,8 @@
             this.lblIDmod = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,10 +73,13 @@
             // 
             // dgvLocalidades
             // 
+            this.dgvLocalidades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLocalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocalidades.Location = new System.Drawing.Point(232, 12);
             this.dgvLocalidades.Name = "dgvLocalidades";
-            this.dgvLocalidades.Size = new System.Drawing.Size(193, 397);
+            this.dgvLocalidades.Size = new System.Drawing.Size(193, 304);
             this.dgvLocalidades.TabIndex = 3;
             // 
             // lblTitulo
@@ -135,15 +140,16 @@
             // 
             // txtID
             // 
-            this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(39, 237);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(22, 20);
             this.txtID.TabIndex = 10;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(232, 415);
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(232, 322);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 11;
@@ -151,11 +157,33 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(96, 322);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(69, 23);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(313, 322);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // frmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 450);
+            this.ClientSize = new System.Drawing.Size(428, 354);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblIDmod);
@@ -191,5 +219,7 @@
         private System.Windows.Forms.Label lblIDmod;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

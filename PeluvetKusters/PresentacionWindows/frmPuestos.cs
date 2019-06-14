@@ -76,5 +76,23 @@ namespace PresentacionWindows
             txtDecripcionMod.Enabled = false;
             cargarGrilla();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Puesto eliminar = new Puesto();
+            PuestoNegocio negocio = new PuestoNegocio();
+
+            eliminar = (Puesto)dgvPuestos.CurrentRow.DataBoundItem;
+
+            if (eliminar == null)
+            {
+                MessageBox.Show("Debe seleccionar un Puesto de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                negocio.eliminarPuesto(eliminar);
+                cargarGrilla();
+            }
+        }
     }
 }
