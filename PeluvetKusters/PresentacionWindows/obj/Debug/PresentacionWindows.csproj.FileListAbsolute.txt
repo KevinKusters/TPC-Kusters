@@ -36,3 +36,5 @@ D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\Pr
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmVerVentas.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmGanancias.resources
 D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmAyuda.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmLogin.resources
+D:\proyectos visual 2017\peluvet\PeluvetKusters\PresentacionWindows\obj\Debug\PresentacionWindows.frmNuevoUsuario.resources

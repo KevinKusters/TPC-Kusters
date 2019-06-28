@@ -41,6 +41,8 @@
             this.btnRealizados = new System.Windows.Forms.Button();
             this.btnNuevoTurno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblBuscador = new System.Windows.Forms.Label();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,10 +54,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTurnos.Location = new System.Drawing.Point(12, 82);
+            this.dgvTurnos.Location = new System.Drawing.Point(12, 109);
             this.dgvTurnos.Name = "dgvTurnos";
             this.dgvTurnos.ReadOnly = true;
-            this.dgvTurnos.Size = new System.Drawing.Size(1015, 355);
+            this.dgvTurnos.Size = new System.Drawing.Size(1015, 328);
             this.dgvTurnos.TabIndex = 19;
             // 
             // lblFecha
@@ -145,6 +147,7 @@
             this.btnCerrar.TabIndex = 24;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnRealizados
             // 
@@ -172,16 +175,35 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(396, 82);
+            this.label1.Location = new System.Drawing.Point(391, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 28;
+            // 
+            // lblBuscador
+            // 
+            this.lblBuscador.AutoSize = true;
+            this.lblBuscador.Location = new System.Drawing.Point(12, 83);
+            this.lblBuscador.Name = "lblBuscador";
+            this.lblBuscador.Size = new System.Drawing.Size(114, 13);
+            this.lblBuscador.TabIndex = 30;
+            this.lblBuscador.Text = "Buscador por nombre: ";
+            // 
+            // txtBuscador
+            // 
+            this.txtBuscador.Location = new System.Drawing.Point(133, 83);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(203, 20);
+            this.txtBuscador.TabIndex = 31;
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             // 
             // frmListarTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 477);
+            this.Controls.Add(this.txtBuscador);
+            this.Controls.Add(this.lblBuscador);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNuevoTurno);
             this.Controls.Add(this.btnRealizados);
@@ -218,5 +240,7 @@
         private System.Windows.Forms.Button btnRealizados;
         private System.Windows.Forms.Button btnNuevoTurno;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBuscador;
+        private System.Windows.Forms.TextBox txtBuscador;
     }
 }

@@ -47,9 +47,11 @@ namespace PresentacionWindows
 
             listaempleadolocal = negocio.ListarEmpleados();
             dgvEmpleados.DataSource = listaempleadolocal;
-            
+
+            dgvEmpleados.Columns[0].Visible = false;
             dgvEmpleados.Columns[1].Visible = false;
-            
+            dgvEmpleados.Columns[2].Visible = false;
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -180,6 +182,11 @@ namespace PresentacionWindows
                 negocio.eliminarEmpleado(eliminar);
                 cargarGrilla();
             }
+        }
+
+        private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

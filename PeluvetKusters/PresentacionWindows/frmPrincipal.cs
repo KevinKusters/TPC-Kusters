@@ -25,9 +25,17 @@ namespace PresentacionWindows
         frmVerVentas ventas;
         frmAyuda ayuda;
 
-        public frmPrincipal()
+        public frmPrincipal(bool admin)
         {
             InitializeComponent();
+            if(admin == true)
+            {
+                configuracionesToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                configuracionesToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)

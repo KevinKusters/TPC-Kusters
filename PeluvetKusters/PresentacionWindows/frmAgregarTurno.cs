@@ -69,11 +69,21 @@ namespace PresentacionWindows
                 cbmservicio.ValueMember = "id";
 
                 aux = (Servicio)cbmservicio.SelectedItem;
-                txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
+
+                if (aux == null)
+                {
+                    MessageBox.Show("Debe completar la configuracion del programa para continuar", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnAgregar.Enabled = false;
+                }
+                else
+                {
+                    btnAgregar.Enabled = true;
+                    txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
+                }
+               
             }
             else
             {
-
                 ServicioNegocio negocio = new ServicioNegocio();
                 Servicio aux = new Servicio();
 
@@ -82,7 +92,17 @@ namespace PresentacionWindows
                 cbmservicio.ValueMember = "id";
 
                 aux = (Servicio)cbmservicio.SelectedItem;
-                txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
+                if (aux == null)
+                {
+                    MessageBox.Show("Debe completar la configuracion del programa para continuar", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnAgregar.Enabled = false;
+                }
+                else
+                {
+                    btnAgregar.Enabled = true;
+                    txtCosto.Text = negocio.DevolverPrecioServicio(aux.id).ToString();
+                }
+                
             }          
         }
 
@@ -141,9 +161,32 @@ namespace PresentacionWindows
         }
 
         private void DtpFecha_ValueChanged(object sender, EventArgs e)
-        {          
-            txtFechaTurno.Text = DtpFecha.Value.ToShortDateString();
-            txtHora.Text = DtpFecha.Value.ToShortTimeString();                   
+        {
+            TimeSpan HoraInicio;
+            TimeSpan LapsoDeTurno;
+
+            if (DtpFecha.Value < DateTime.Now)
+            {
+                MessageBox.Show("La fecha seleccionada es menos a la actual", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                txtFechaTurno.Text = DtpFecha.Value.ToShortDateString();
+                txtHora.Text = DtpFecha.Value.ToShortTimeString();
+
+                HoraInicio = TimeSpan.Parse(txtHora.Text);
+
+                if (rdbPeluqueria.Checked == true)
+                {
+                    LapsoDeTurno = TimeSpan.Parse("02:00");
+                }
+                else
+                {
+                    LapsoDeTurno = TimeSpan.Parse("00:30");
+                }
+
+                txtHoraFinalizacionTurno.Text = (HoraInicio + LapsoDeTurno).ToString();
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -152,10 +195,9 @@ namespace PresentacionWindows
             TurnoNegocio negocio = new TurnoNegocio();
             Empleado empleado = new Empleado();
 
-            empleado = (Empleado)dgvempleados.CurrentRow.DataBoundItem;
+            empleado = (Empleado)dgvempleados.CurrentRow.DataBoundItem;         
 
             flag=negocio.VerificarHora(txtHora.Text,empleado.id,txtFechaTurno.Text);
-
 
             if(txtapellidocli.Text == "" || txtnombrecli.Text == "" || txtnombremasc.Text==""|| txtEspecie.Text == "" || txtapellidomasc.Text == "" || txtraza.Text == "" || txtHora.Text=="" || txtHora.Text == "")
             {
@@ -191,11 +233,11 @@ namespace PresentacionWindows
 
                 if(rdbPeluqueria.Checked == true)
                 {
-                    negocio.CargarHorasTomadasPeluqueria(txtHora.Text,txtFechaTurno.Text, aux,aux2);
+                    negocio.CargarHorasTomadasPeluqueria(txtHora.Text,txtFechaTurno.Text, aux.id,aux2);
                 }
                 if (rdbVeterinaria.Checked == true)
                 {
-                    negocio.CargarHorasTomadasVeterinaria(txtHora.Text, txtFechaTurno.Text, aux,aux2);
+                    negocio.CargarHorasTomadasVeterinaria(txtHora.Text, txtFechaTurno.Text, aux.id,aux2);
                 }             
 
                 MessageBox.Show("Turno guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -52,6 +52,7 @@ namespace Negocio
         public void agregarCliente(Cliente nuevo)
         {
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+
             try
             {
                 accesoDatos.setearConsulta("INSERT INTO CLIENTES (NOMBRE, APELLIDO,CONTACTO,LOCALIDAD,ESTADO) VALUES (@NOMBRE,@APELLIDO,@CONTACTO,@LOCALIDAD,@ESTADO)");
@@ -94,6 +95,63 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public int RecuperarUltimoId()
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+            int devuelvo = -1;
+
+            try
+            {
+                accesoDatos.setearConsulta("SELECT MAX(ID) AS ID FROM CLIENTES WHERE ESTADO LIKE 1");
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarConsulta();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    devuelvo = (int)accesoDatos.Lector["ID"];
+                }
+
+                return devuelvo;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Cliente DevolverClienteWEB(int idUsuario)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+            Cliente cliente = new Cliente();
+
+            try
+            {
+                accesoDatos.setearConsulta("SELECT C.* FROM CLIENTES AS C INNER JOIN REGISTROsWEB AS R ON R.ID = @id");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", idUsuario);
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarConsulta();
+
+                if (accesoDatos.Lector.Read())
+                {                   
+                    cliente.id = (int)accesoDatos.Lector["id"];
+                    cliente.nombre = accesoDatos.Lector["nombre"].ToString();
+                    cliente.apellido = accesoDatos.Lector["apellido"].ToString();
+                    cliente.contacto = accesoDatos.Lector["contacto"].ToString();
+                }
+
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        } 
+        
+
+
     }
 }
 

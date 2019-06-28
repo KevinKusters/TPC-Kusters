@@ -57,15 +57,23 @@ namespace PresentacionWindows
         private void btnAgregarMascota_Click(object sender, EventArgs e)
         {
             Cliente cli = new Cliente();
-            cli =(Cliente) dgbAgregarCliente.CurrentRow.DataBoundItem;
 
-            if(mascota == null)
+            if(dgbAgregarCliente.RowCount == 0)
             {
-                mascota = new frmAgregarMascota(cli);
-                mascota.MdiParent = this.MdiParent;
-                mascota.FormClosed += new FormClosedEventHandler(MascotaFormClosed);
-                mascota.Show();
-            }                       
+                MessageBox.Show("No hay clientes cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                cli =(Cliente) dgbAgregarCliente.CurrentRow.DataBoundItem;
+
+                    if(mascota == null)
+                    {
+                        mascota = new frmAgregarMascota(cli);
+                        mascota.MdiParent = this.MdiParent;
+                        mascota.FormClosed += new FormClosedEventHandler(MascotaFormClosed);
+                        mascota.Show();
+                    } 
+            }                              
         }
 
         void MascotaFormClosed (object sender, EventArgs e)
@@ -75,18 +83,25 @@ namespace PresentacionWindows
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-            ClienteNegocio negocio = new ClienteNegocio();
+            if(txtNombreCli.Text == "" || txtApellidoCli.Text == "" || txtContacto.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos de cliente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Cliente cliente = new Cliente();
+                ClienteNegocio negocio = new ClienteNegocio();
             
-            cliente.nombre = txtNombreCli.Text;
-            cliente.apellido = txtApellidoCli.Text;
-            cliente.contacto = txtContacto.Text;
-            cliente.estado = true;
-            cliente.localidad = (Localidad)cmbLocalidades.SelectedItem;
+                cliente.nombre = txtNombreCli.Text;
+                cliente.apellido = txtApellidoCli.Text;
+                cliente.contacto = txtContacto.Text;
+                cliente.estado = true;
+                cliente.localidad = (Localidad)cmbLocalidades.SelectedItem;
 
-            negocio.agregarCliente(cliente);
+                negocio.agregarCliente(cliente);
             
-            cargarGrilla();            
+                cargarGrilla();            
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -102,17 +117,22 @@ namespace PresentacionWindows
             Cliente modificar = new Cliente();
             ClienteNegocio negocio = new ClienteNegocio();
 
-            modificar = (Cliente)dgbAgregarCliente.CurrentRow.DataBoundItem;
-            txtIdMod.Text = modificar.id.ToString();
-            txtNombreMod.Text = modificar.nombre;
-            txtApellidoMod.Text = modificar.apellido;
-            txtContactoMod.Text = modificar.contacto;
+            if(dgbAgregarCliente.RowCount == 0)
+            {
+                MessageBox.Show("No hay clientes cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                modificar = (Cliente)dgbAgregarCliente.CurrentRow.DataBoundItem;
+                txtIdMod.Text = modificar.id.ToString();
+                txtNombreMod.Text = modificar.nombre;
+                txtApellidoMod.Text = modificar.apellido;
+                txtContactoMod.Text = modificar.contacto;
 
-            cmbLocalidadMod.SelectedIndex = modificar.localidad.id-1;
-            enabletxt();
+                cmbLocalidadMod.SelectedIndex = modificar.localidad.id-1;
+                enabletxt();
+            }    
         }
-
-
 
         private void enabletxt()
          {

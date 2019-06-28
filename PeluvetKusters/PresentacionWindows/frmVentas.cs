@@ -54,31 +54,33 @@ namespace PresentacionWindows
 
             producto = (Producto)cmbProductos.SelectedItem;
 
-            if(txtCosto.Text == "" || txtPrecio.Text == "" || txtFecha.Text == ""||txtCantidad.Text == "")
+            if (txtCosto.Text == "" || txtPrecio.Text == "" || txtFecha.Text == "" || txtCantidad.Text == "")
             {
                 MessageBox.Show("Debe seleccionar un producto e ingresar la cantidad a vender", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (producto.stock == 0)
-            {
-                MessageBox.Show("No hay stock disponible para este producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else
             {
-                VentaNegocio negocio = new VentaNegocio();
-                GananciasXMesNegocio ganancias = new GananciasXMesNegocio();
-                Venta nueva = new Venta();
+                if (producto.stock == 0)
+                {
+                    MessageBox.Show("No hay stock disponible para este producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    VentaNegocio negocio = new VentaNegocio();
+                    GananciasXMesNegocio ganancias = new GananciasXMesNegocio();
+                    Venta nueva = new Venta();
 
-                nueva.producto = (Producto)cmbProductos.SelectedItem;          
-                nueva.Fecha = DateTime.Parse(txtFecha.Text);
-                nueva.cantidad = int.Parse(txtCantidad.Text);
-                nueva.PrecioVenta = decimal.Parse(txtPrecio.Text);
-                nueva.Costo = decimal.Parse(txtCosto.Text);
-               
+                    nueva.producto = (Producto)cmbProductos.SelectedItem;
+                    nueva.Fecha = DateTime.Parse(txtFecha.Text);
+                    nueva.cantidad = int.Parse(txtCantidad.Text);
+                    nueva.PrecioVenta = decimal.Parse(txtPrecio.Text);
+                    nueva.Costo = decimal.Parse(txtCosto.Text);
 
-                negocio.reducirStock(nueva.producto,int.Parse(txtCantidad.Text));
-                negocio.CargarVenta(nueva);                
+                    negocio.reducirStock(nueva.producto, int.Parse(txtCantidad.Text));
+                    negocio.CargarVenta(nueva);
 
-                MessageBox.Show("Venta registrada", "MENSAJE", MessageBoxButtons.OK);
+                    MessageBox.Show("Venta registrada", "MENSAJE", MessageBoxButtons.OK);
+                }
             }
         }
 

@@ -117,30 +117,65 @@ namespace PresentacionWindows
             TurnoNegocio negocio = new TurnoNegocio();
             Turno cancelado = new Turno();
 
-            cancelado = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
-            cancelado.estado = false;
-            negocio.CancelarTurno(cancelado);
-            negocio.CancelarTurnoTomado(cancelado.id);
+            if(dgvTurnos.RowCount == 0)
+            {
+                MessageBox.Show("No hay turnos cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                cancelado = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
+                cancelado.estado = false;
+                negocio.CancelarTurno(cancelado);
+                negocio.CancelarTurnoTomado(cancelado.id);
 
-            cargarGrillaHoy();
+                cargarGrillaHoy();
+            }         
         }
 
         private void btnRealizado_Click(object sender, EventArgs e)
         {
             TurnoNegocio negocio = new TurnoNegocio();
             Turno turno = new Turno();
-
-            turno = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
-            turno.realizado = true;
-            negocio.TurnoRealizado(turno);
-
-            cargarGrillaHoy();
+            
+            if(dgvTurnos.RowCount == 0)
+            {
+                MessageBox.Show("No hay turnos cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                  
+            else
+            {
+                turno = (Turno)dgvTurnos.CurrentRow.DataBoundItem;
+                turno.realizado = true;
+                negocio.TurnoRealizado(turno);
+                cargarGrillaHoy();
+            }
+            
         }
 
         private void btnCancelados_Click(object sender, EventArgs e)
         {
             cargarGrillaRealizados();
         }
- 
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscador.Text == "")
+            {
+                cargarGrilla();
+            }
+            else
+            {
+                if (txtBuscador.Text.Length >= 3)
+                {
+                    List<Turno> Lista = new List<Turno>();
+                    Lista = ListaLocalTurnos.FindAll(X => X.cliente.nombre.Contains(txtBuscador.Text));
+                   dgvTurnos.DataSource = Lista;
+                }
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

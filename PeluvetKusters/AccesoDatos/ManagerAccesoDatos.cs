@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Data.SqlClient;                      
 
 namespace AccesoDatos
 {
     public class ManagerAccesoDatos
-    {
-        public static string cadenaConexion = "server=CLARIS ; database=Kusters_db ; integrated security = true";
+    {   
+        //poner server...
+
+        public static string cadenaConexion = "server= ; database=Kusters_DB; integrated security = true";
         private SqlCommand comando;
         private SqlConnection conexion;
         private SqlDataReader lector;

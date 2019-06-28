@@ -64,6 +64,8 @@
             this.lblIDAnimal = new System.Windows.Forms.Label();
             this.txtIDmascota = new System.Windows.Forms.TextBox();
             this.lblRubro = new System.Windows.Forms.Label();
+            this.txtHoraFinalizacionTurno = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -318,7 +320,7 @@
             this.lblAviso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAviso.Location = new System.Drawing.Point(278, 109);
+            this.lblAviso.Location = new System.Drawing.Point(278, 122);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(214, 20);
             this.lblAviso.TabIndex = 88;
@@ -407,11 +409,30 @@
             this.lblRubro.TabIndex = 96;
             this.lblRubro.Text = "Rubro";
             // 
+            // txtHoraFinalizacionTurno
+            // 
+            this.txtHoraFinalizacionTurno.Location = new System.Drawing.Point(384, 97);
+            this.txtHoraFinalizacionTurno.Name = "txtHoraFinalizacionTurno";
+            this.txtHoraFinalizacionTurno.ReadOnly = true;
+            this.txtHoraFinalizacionTurno.Size = new System.Drawing.Size(98, 20);
+            this.txtHoraFinalizacionTurno.TabIndex = 97;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(287, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Hora Finalizacion:";
+            // 
             // frmAgregarTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 494);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtHoraFinalizacionTurno);
             this.Controls.Add(this.lblRubro);
             this.Controls.Add(this.lblIDAnimal);
             this.Controls.Add(this.txtIDmascota);
@@ -494,5 +515,7 @@
         private System.Windows.Forms.Label lblIDAnimal;
         public System.Windows.Forms.TextBox txtIDmascota;
         private System.Windows.Forms.Label lblRubro;
+        private System.Windows.Forms.TextBox txtHoraFinalizacionTurno;
+        private System.Windows.Forms.Label label1;
     }
 }

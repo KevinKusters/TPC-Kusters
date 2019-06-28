@@ -40,7 +40,7 @@ namespace Negocio
                     Listado.Add(empleado);
                 }
 
-                return Listado;       
+                return Listado;
 
             }
             catch (Exception ex)
@@ -57,7 +57,7 @@ namespace Negocio
             {
                 accesoDatos.setearConsulta("INSERT INTO EMPLEADOS (NOMBRE, APELLIDO, CONTACTO,RUBRO, PUESTO, ESTADO ) VALUES (@NOMBRE, @APELLIDO, @CONTACTO,@RUBRO, @PUESTO, @ESTADO)");
                 accesoDatos.Comando.Parameters.Clear();
-                accesoDatos.Comando.Parameters.AddWithValue("@NOMBRE",nuevo.nombre);
+                accesoDatos.Comando.Parameters.AddWithValue("@NOMBRE", nuevo.nombre);
                 accesoDatos.Comando.Parameters.AddWithValue("@APELLIDO", nuevo.apellido);
                 accesoDatos.Comando.Parameters.AddWithValue("@CONTACTO", nuevo.contacto);
                 accesoDatos.Comando.Parameters.AddWithValue("@RUBRO", nuevo.rubro);
@@ -123,8 +123,8 @@ namespace Negocio
                 accesoDatos.setearConsulta("UPDATE EMPLEADOS SET  NOMBRE = @nombre, APELLIDO = @apellido, CONTACTO = @contacto, PUESTO = @puesto, RUBRO = @rubro WHERE ID =  @id");
                 accesoDatos.Comando.Parameters.Clear();
                 accesoDatos.Comando.Parameters.AddWithValue("@nombre", modificado.nombre);
-                accesoDatos.Comando.Parameters.AddWithValue("@apellido",modificado.apellido);
-                accesoDatos.Comando.Parameters.AddWithValue("@contacto",modificado.contacto);
+                accesoDatos.Comando.Parameters.AddWithValue("@apellido", modificado.apellido);
+                accesoDatos.Comando.Parameters.AddWithValue("@contacto", modificado.contacto);
                 accesoDatos.Comando.Parameters.AddWithValue("@puesto", modificado.puesto.Id);
                 accesoDatos.Comando.Parameters.AddWithValue("@rubro", modificado.rubro);
                 accesoDatos.Comando.Parameters.AddWithValue("@id", modificado.id);
@@ -158,5 +158,5 @@ namespace Negocio
             }
         }
 
-    }
+    } 
 }

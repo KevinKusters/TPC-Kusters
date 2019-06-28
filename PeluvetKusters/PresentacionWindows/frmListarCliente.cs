@@ -69,15 +69,21 @@ namespace PresentacionWindows
             if (listamascota == null)
             {
                 Cliente cli = new Cliente();
-                cli = (Cliente)dgvClientes.CurrentRow.DataBoundItem;
 
-                listamascota = new frmListaMascotas(cli);
-                listamascota.MdiParent = this.MdiParent;
-                listamascota.FormClosed += new FormClosedEventHandler(ListaMascotaFormClosed);
-                listamascota.Show();
+                if(dgvClientes.RowCount == 0)
+                {
+                    MessageBox.Show("No hay Clientes cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    cli = (Cliente)dgvClientes.CurrentRow.DataBoundItem;
+                    listamascota = new frmListaMascotas(cli);
+                    listamascota.MdiParent = this.MdiParent;
+                    listamascota.FormClosed += new FormClosedEventHandler(ListaMascotaFormClosed);
+                    listamascota.Show();
+                }          
             }
         }
-
 
         void ListaMascotaFormClosed(object sender, EventArgs e)
         {

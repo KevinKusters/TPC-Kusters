@@ -26,6 +26,7 @@ namespace PresentacionWindows
 
             dgvLocalidades.DataSource = negocio.ListarLocalidades();
             dgvLocalidades.Columns[0].Visible = false;
+            dgvLocalidades.Columns[1].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

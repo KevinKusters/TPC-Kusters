@@ -60,6 +60,7 @@
     <Compile Include="RazaNegocio.cs" />
     <Compile Include="ServicioNegocio.cs" />
     <Compile Include="TurnoNegocio.cs" />
+    <Compile Include="UsuarioNegocio.cs" />
     <Compile Include="VentaNegocio.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

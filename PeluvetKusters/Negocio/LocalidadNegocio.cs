@@ -101,5 +101,33 @@ namespace Negocio
             }
         }
 
+        public int DevolverID(string nombre)
+        {
+            
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+            int devuelve = -1;
+
+            try
+            {
+                accesoDatos.setearConsulta("select IDLOCALIDAD from LOCALIDADES WHERE ESTAD LIKE 1 and NOMBRE LIKE '@NOMBRE'");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@NOMBRE", nombre);
+
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarConsulta();
+
+                if (accesoDatos.Lector.Read())
+                {
+                    devuelve = (int)accesoDatos.Lector["ID"];
+                }
+
+                return devuelve;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

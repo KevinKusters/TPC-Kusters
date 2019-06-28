@@ -59,7 +59,12 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
+        
 
         public void cargarTurno(Turno nuevo)
         {
@@ -84,6 +89,10 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
             }
         }
 
@@ -135,6 +144,10 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
             }
         }
 
@@ -190,7 +203,12 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
+        
 
 
         public void CancelarTurno(Turno cancelado)
@@ -211,6 +229,10 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
 
         public void TurnoRealizado(Turno turno)
@@ -230,6 +252,10 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
             }
         }
 
@@ -282,6 +308,10 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
 
         public bool VerificarHora(string hora,int id,string fecha)
@@ -311,9 +341,13 @@ namespace Negocio
             {
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
      
-        public void CargarHorasTomadasPeluqueria(String hora, string fecha,Empleado empleado,int id)
+        public void CargarHorasTomadasPeluqueria(String hora, string fecha,int empleado,int id)
         {
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             TimeSpan aux1;
@@ -323,7 +357,7 @@ namespace Negocio
             {
                 accesoDatos.setearConsulta("INSERT INTO TURNOSTOMADOS (FECHA, HORAINICIO, HORAFIN,IDEMPLEADO,IDTURNO) VALUES (@fecha, @horainicio,@horafin,@idempleado,@idturno)");
                 accesoDatos.Comando.Parameters.Clear();
-                accesoDatos.Comando.Parameters.AddWithValue("@fecha", DateTime.Parse(hora));
+                accesoDatos.Comando.Parameters.AddWithValue("@fecha", DateTime.Parse(fecha));
                 accesoDatos.Comando.Parameters.AddWithValue("@horainicio", TimeSpan.Parse(hora));
 
                 aux1 = TimeSpan.Parse(hora);
@@ -331,7 +365,7 @@ namespace Negocio
                 aux1 = aux1 + aux2;             
 
                 accesoDatos.Comando.Parameters.AddWithValue("@horafin", aux1);
-                accesoDatos.Comando.Parameters.AddWithValue("@idempleado", empleado.id);
+                accesoDatos.Comando.Parameters.AddWithValue("@idempleado", empleado);
                 accesoDatos.Comando.Parameters.AddWithValue("@idturno", id);
 
                 accesoDatos.abrirConexion();
@@ -348,7 +382,7 @@ namespace Negocio
             }
         }
 
-        public void CargarHorasTomadasVeterinaria(String hora, string fecha, Empleado empleado,int id)
+        public void CargarHorasTomadasVeterinaria(String hora, string fecha, int empleado,int id)
         {
             ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
             TimeSpan aux1;
@@ -358,7 +392,7 @@ namespace Negocio
             {
                 accesoDatos.setearConsulta("INSERT INTO TURNOSTOMADOS (FECHA, HORAINICIO, HORAFIN,IDEMPLEADO,IDTURNO) VALUES (@fecha, @horainicio,@horafin,@idempleado,@idturno)");
                 accesoDatos.Comando.Parameters.Clear();
-                accesoDatos.Comando.Parameters.AddWithValue("@fecha", DateTime.Parse(hora));
+                accesoDatos.Comando.Parameters.AddWithValue("@fecha", DateTime.Parse(fecha));
                 accesoDatos.Comando.Parameters.AddWithValue("@horainicio", TimeSpan.Parse(hora));                
 
                 aux1 = TimeSpan.Parse(hora);
@@ -366,7 +400,7 @@ namespace Negocio
                 aux1 = aux1 + aux2;
 
                 accesoDatos.Comando.Parameters.AddWithValue("@horafin",aux1);
-                accesoDatos.Comando.Parameters.AddWithValue("@idempleado", empleado.id);
+                accesoDatos.Comando.Parameters.AddWithValue("@idempleado", empleado);
                 accesoDatos.Comando.Parameters.AddWithValue("@idturno", id);
 
                 accesoDatos.abrirConexion();
@@ -403,6 +437,10 @@ namespace Negocio
 
                 throw ex;
             }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
         }
 
         public int DevolverUltimoID()
@@ -422,6 +460,58 @@ namespace Negocio
                 }
 
                 return aux;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Turno> listarTurnosXclienteWEB(int idcliente)
+        {
+            ManagerAccesoDatos accesoDatos = new ManagerAccesoDatos();
+            List<Turno> Listado = new List<Turno>();
+            Turno turno;
+            try
+            {
+                accesoDatos.setearConsulta("select c.nombre as nombre, c.apellido as apellido ,t.fecha as Fecha,t.hora as Hora,a.nombre as Mascota,a.especie as especie, r.nombre as Raza, s.descripcion as Servicio, s.precio as Precio, e.nombre as NombreEmpleado, e.apellido as ApellidoEmpleado from turnos as t inner join clientes as c on c.id = @id inner join animales as a on a.id = t.idmascota inner join razas as r on r.id = a.idraza inner join servicios as s on s.id = t.idservicio inner join empleados as e on e.id = t.idempleado where t.estado like 1 and t.realizado like 0");
+                accesoDatos.Comando.Parameters.Clear();
+                accesoDatos.Comando.Parameters.AddWithValue("@id", idcliente);
+                accesoDatos.abrirConexion();
+                accesoDatos.ejecutarConsulta();
+
+               if(accesoDatos.Lector.Read())
+                {
+                    turno = new Turno();
+
+                    turno.cliente = new Cliente();
+                    turno.cliente.nombre = accesoDatos.Lector["Nombre"].ToString();
+                    turno.cliente.apellido = accesoDatos.Lector["Apellido"].ToString();
+
+
+                    turno.animal = new Animal();
+                    turno.animal.nombre = accesoDatos.Lector["Mascota"].ToString();
+                    turno.animal.especie = accesoDatos.Lector["especie"].ToString();
+
+                    turno.animal.raza = new Raza();
+                    turno.animal.raza.nombre = accesoDatos.Lector["Raza"].ToString();
+
+                    turno.servicio = new Servicio();
+                    turno.servicio.descripcion = accesoDatos.Lector["Servicio"].ToString();
+                    turno.servicio.precio = (decimal)accesoDatos.Lector["Precio"];
+
+                    turno.empleado = new Empleado();
+                    turno.empleado.nombre = accesoDatos.Lector["NombreEmpleado"].ToString();
+                    turno.empleado.apellido = accesoDatos.Lector["ApellidoEmpleado"].ToString();
+
+                    turno.fecha = Convert.ToDateTime(accesoDatos.Lector["Fecha"]).ToShortDateString().ToString();
+                    turno.hora = accesoDatos.Lector["Hora"].ToString();
+
+                    Listado.Add(turno);
+                }
+
+                return Listado;
+
             }
             catch (Exception ex)
             {
