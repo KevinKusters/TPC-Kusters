@@ -170,6 +170,11 @@ estado bit not null default(1),
 
 go
 
+insert into razas (nombre,estado) 
+values ('Otro','1')
+
+go
+
 create procedure sp_listar_proveedores
 as
 begin
@@ -278,7 +283,3 @@ inner join productos as p on p.id = v.idproducto
 where v.estado like 0
 end
 
-go
-
-insert into razas (nombre,estado)
-values('otro','1')

@@ -34,13 +34,20 @@ namespace PresentacionWindows
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Puesto puesto = new Puesto();
-            PuestoNegocio negocio = new PuestoNegocio();
+            if(txtDescripcionAgr.Text == "")
+            {
+                MessageBox.Show("Debe ingresar una descripcion para el puesto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Puesto puesto = new Puesto();
+                PuestoNegocio negocio = new PuestoNegocio();
 
-            puesto.Descripcion = txtDescripcionAgr.Text;
-            negocio.cargarPuesto(puesto);
+                puesto.Descripcion = txtDescripcionAgr.Text;
+                negocio.cargarPuesto(puesto);
 
-            cargarGrilla();
+                cargarGrilla();
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

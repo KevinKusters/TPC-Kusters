@@ -56,30 +56,39 @@ namespace PresentacionWindows
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Empleado empleado = new Empleado();
-            EmpleadoNegocio negocio = new EmpleadoNegocio();
 
-            empleado.nombre = txtNombreAgr.Text;
-            empleado.apellido = txtApellidoAgr.Text;
-            empleado.contacto = txtContactoAgr.Text;            
-            empleado.puesto = (Puesto)cmbPuestosAgr.SelectedItem;
 
-            if(rdbPeluqueria.Checked == true)
+            if(txtNombreAgr.Text == "" || txtApellidoAgr.Text=="" || txtContactoAgr.Text == "" || cmbPuestosAgr.Items.Count <= 0)
             {
-                empleado.rubro = rdbPeluqueria.Text;
+                MessageBox.Show("Debe completar todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if(rdbVeterinaria.Checked == true)
+            else
             {
-                empleado.rubro = rdbVeterinaria.Text;
-            }           
+                Empleado empleado = new Empleado();
+                EmpleadoNegocio negocio = new EmpleadoNegocio();
 
-            negocio.CargarEmpleado(empleado);
-            cargarGrilla();
+                empleado.nombre = txtNombreAgr.Text;
+                empleado.apellido = txtApellidoAgr.Text;
+                empleado.contacto = txtContactoAgr.Text;
+                empleado.puesto = (Puesto)cmbPuestosAgr.SelectedItem;
 
-            txtApellidoAgr.Text = "";
-            txtNombreAgr.Text = "";
-            txtContactoAgr.Text = "";
-            
+                if (rdbPeluqueria.Checked == true)
+                {
+                    empleado.rubro = rdbPeluqueria.Text;
+                }
+                if (rdbVeterinaria.Checked == true)
+                {
+                    empleado.rubro = rdbVeterinaria.Text;
+                }
+
+                negocio.CargarEmpleado(empleado);
+                cargarGrilla();
+
+                txtApellidoAgr.Text = "";
+                txtNombreAgr.Text = "";
+                txtContactoAgr.Text = "";
+            }
+ 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -99,30 +108,38 @@ namespace PresentacionWindows
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Empleado modificar = new Empleado();            
 
-            modificar = (Empleado)dgvEmpleados.CurrentRow.DataBoundItem;
-            txtIDMod.Text = modificar.id.ToString();
-            txtNombreMod.Text = modificar.nombre;
-            txtApellidoMod.Text = modificar.apellido;
-            txtContactoMod.Text = modificar.contacto;
-            cmbPuestoMod.SelectedValue = modificar.puesto.Id;
-
-            if(modificar.rubro == "Veterinaria")
+            if (txtNombreMod.Text == "" || txtApellidoMod.Text == "" || txtContactoMod.Text == "")
             {
-                rdbVeterinariaMod.Checked = true;
+                MessageBox.Show("Debe completar todos los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                rdbPeluqueriaMod.Checked = true;
-            }
+                Empleado modificar = new Empleado();
 
-            txtNombreMod.Enabled = true;
-            txtApellidoMod.Enabled = true;
-            txtContactoMod.Enabled = true;
-            rdbPeluqueriaMod.Enabled = true;
-            rdbVeterinariaMod.Enabled = true;
-            cmbPuestoMod.Enabled = true;
+                modificar = (Empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+                txtIDMod.Text = modificar.id.ToString();
+                txtNombreMod.Text = modificar.nombre;
+                txtApellidoMod.Text = modificar.apellido;
+                txtContactoMod.Text = modificar.contacto;
+                cmbPuestoMod.SelectedValue = modificar.puesto.Id;
+
+                if (modificar.rubro == "Veterinaria")
+                {
+                    rdbVeterinariaMod.Checked = true;
+                }
+                else
+                {
+                    rdbPeluqueriaMod.Checked = true;
+                }
+
+                txtNombreMod.Enabled = true;
+                txtApellidoMod.Enabled = true;
+                txtContactoMod.Enabled = true;
+                rdbPeluqueriaMod.Enabled = true;
+                rdbVeterinariaMod.Enabled = true;
+                cmbPuestoMod.Enabled = true;
+            }       
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -173,18 +190,25 @@ namespace PresentacionWindows
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Empleado eliminar = new Empleado();
-            EmpleadoNegocio negocio = new EmpleadoNegocio();
-            eliminar = (Empleado)dgvEmpleados.CurrentRow.DataBoundItem;
-
-            if (eliminar == null)
+            if(dgvEmpleados.Rows.Count == 0)
             {
-                MessageBox.Show("Debe seleccionar un empleado de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay empleados cargados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                negocio.eliminarEmpleado(eliminar);
-                cargarGrilla();
+                Empleado eliminar = new Empleado();
+                EmpleadoNegocio negocio = new EmpleadoNegocio();
+                eliminar = (Empleado)dgvEmpleados.CurrentRow.DataBoundItem;
+
+                if (eliminar == null)
+                {
+                    MessageBox.Show("Debe seleccionar un empleado de la lista", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    negocio.eliminarEmpleado(eliminar);
+                    cargarGrilla();
+                }
             }
         }
 

@@ -83,7 +83,7 @@ namespace PresentacionWindows
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(txtNombreCli.Text == "" || txtApellidoCli.Text == "" || txtContacto.Text == "")
+            if(txtNombreCli.Text == "" || txtApellidoCli.Text == "" || txtContacto.Text == "" || cmbLocalidades.Items.Count <= 0)
             {
                 MessageBox.Show("Debe completar todos los campos de cliente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -108,8 +108,7 @@ namespace PresentacionWindows
         {
             txtNombreCli.Text = "";
             txtApellidoCli.Text = "";
-            txtContacto.Text = "";
-            cmbLocalidades.SelectedIndex = 0;
+            txtContacto.Text = "";             
         }
 
         private void btnmodificar_Click(object sender, EventArgs e)

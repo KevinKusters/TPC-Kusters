@@ -64,11 +64,11 @@ namespace Negocio
                 accesoDatos.Comando.Parameters.AddWithValue("@ESTADO", nuevo.estado);
 
                 accesoDatos.abrirConexion();
-                accesoDatos.ejecutarAccion();
+                accesoDatos.ejecutarAccion();                
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw ex;                
             }
 
         }
