@@ -74,6 +74,8 @@
             // btnmodificar
             // 
             this.btnmodificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnmodificar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmodificar.BackgroundImage")));
+            this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.Location = new System.Drawing.Point(514, 439);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(93, 23);
@@ -84,6 +86,8 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(143, 183);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 23);
@@ -94,6 +98,8 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(46, 183);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(91, 23);
@@ -181,6 +187,8 @@
             // btnAgregarMascota
             // 
             this.btnAgregarMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarMascota.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMascota.BackgroundImage")));
+            this.btnAgregarMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMascota.Location = new System.Drawing.Point(613, 439);
             this.btnAgregarMascota.Name = "btnAgregarMascota";
             this.btnAgregarMascota.Size = new System.Drawing.Size(100, 23);
@@ -192,6 +200,8 @@
             // btnAceptarMod
             // 
             this.btnAceptarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAceptarMod.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarMod.BackgroundImage")));
+            this.btnAceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarMod.Location = new System.Drawing.Point(46, 439);
             this.btnAceptarMod.Name = "btnAceptarMod";
             this.btnAceptarMod.Size = new System.Drawing.Size(91, 23);
@@ -203,6 +213,8 @@
             // btnCancelarMod
             // 
             this.btnCancelarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelarMod.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelarMod.BackgroundImage")));
+            this.btnCancelarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarMod.Location = new System.Drawing.Point(143, 439);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(91, 23);

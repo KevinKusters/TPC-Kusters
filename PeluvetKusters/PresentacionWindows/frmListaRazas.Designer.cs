@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaRazas));
             this.dgvListaRazas = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
             this.txtNombreAgr = new System.Windows.Forms.TextBox();
@@ -60,6 +61,8 @@
             // 
             // btnListar
             // 
+            this.btnListar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListar.BackgroundImage")));
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.Location = new System.Drawing.Point(16, 273);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(245, 27);
@@ -96,6 +99,8 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(133, 76);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(90, 23);
@@ -133,6 +138,8 @@
             // 
             // btnModificarSelect
             // 
+            this.btnModificarSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModificarSelect.BackgroundImage")));
+            this.btnModificarSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarSelect.Location = new System.Drawing.Point(16, 306);
             this.btnModificarSelect.Name = "btnModificarSelect";
             this.btnModificarSelect.Size = new System.Drawing.Size(245, 27);
@@ -143,6 +150,8 @@
             // 
             // btnaceptarMod
             // 
+            this.btnaceptarMod.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnaceptarMod.BackgroundImage")));
+            this.btnaceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaceptarMod.Location = new System.Drawing.Point(133, 224);
             this.btnaceptarMod.Name = "btnaceptarMod";
             this.btnaceptarMod.Size = new System.Drawing.Size(90, 23);
@@ -172,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(513, 364);
             this.Controls.Add(this.txtIdRaza);
             this.Controls.Add(this.lblIdRaza);

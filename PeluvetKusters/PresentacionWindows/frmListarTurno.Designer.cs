@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListarTurno));
             this.dgvTurnos = new System.Windows.Forms.DataGridView();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
@@ -79,6 +80,8 @@
             // 
             // btnaceptar
             // 
+            this.btnaceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnaceptar.Image")));
             this.btnaceptar.Location = new System.Drawing.Point(173, 48);
             this.btnaceptar.Name = "btnaceptar";
             this.btnaceptar.Size = new System.Drawing.Size(82, 23);
@@ -98,6 +101,8 @@
             // 
             // btnListarTodos
             // 
+            this.btnListarTodos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListarTodos.BackgroundImage")));
+            this.btnListarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarTodos.Location = new System.Drawing.Point(173, 24);
             this.btnListarTodos.Name = "btnListarTodos";
             this.btnListarTodos.Size = new System.Drawing.Size(82, 23);
@@ -108,9 +113,11 @@
             // 
             // btnHoy
             // 
+            this.btnHoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoy.Image = ((System.Drawing.Image)(resources.GetObject("btnHoy.Image")));
             this.btnHoy.Location = new System.Drawing.Point(261, 24);
             this.btnHoy.Name = "btnHoy";
-            this.btnHoy.Size = new System.Drawing.Size(75, 23);
+            this.btnHoy.Size = new System.Drawing.Size(105, 23);
             this.btnHoy.TabIndex = 21;
             this.btnHoy.Text = "Turnos HOY";
             this.btnHoy.UseVisualStyleBackColor = true;
@@ -119,6 +126,8 @@
             // btnCancelarTurno
             // 
             this.btnCancelarTurno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarTurno.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarTurno.Image")));
             this.btnCancelarTurno.Location = new System.Drawing.Point(12, 443);
             this.btnCancelarTurno.Name = "btnCancelarTurno";
             this.btnCancelarTurno.Size = new System.Drawing.Size(95, 23);
@@ -130,6 +139,8 @@
             // btnRealizado
             // 
             this.btnRealizado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRealizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealizado.Image = ((System.Drawing.Image)(resources.GetObject("btnRealizado.Image")));
             this.btnRealizado.Location = new System.Drawing.Point(113, 443);
             this.btnRealizado.Name = "btnRealizado";
             this.btnRealizado.Size = new System.Drawing.Size(126, 23);
@@ -141,6 +152,8 @@
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(955, 443);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
@@ -152,6 +165,8 @@
             // btnRealizados
             // 
             this.btnRealizados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRealizados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealizados.Image = ((System.Drawing.Image)(resources.GetObject("btnRealizados.Image")));
             this.btnRealizados.Location = new System.Drawing.Point(245, 443);
             this.btnRealizados.Name = "btnRealizados";
             this.btnRealizados.Size = new System.Drawing.Size(121, 23);
@@ -163,6 +178,8 @@
             // btnNuevoTurno
             // 
             this.btnNuevoTurno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevoTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoTurno.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoTurno.Image")));
             this.btnNuevoTurno.Location = new System.Drawing.Point(372, 443);
             this.btnNuevoTurno.Name = "btnNuevoTurno";
             this.btnNuevoTurno.Size = new System.Drawing.Size(112, 23);
@@ -201,6 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1042, 477);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.lblBuscador);

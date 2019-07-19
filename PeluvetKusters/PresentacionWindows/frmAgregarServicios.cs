@@ -60,6 +60,9 @@ namespace PresentacionWindows
 
                 negocio.agregarServicio(nuevo);
                 cargarGrilla();
+
+                txtDescripcionAlta.Text = "";
+                txtPrecioAlta.Text = "";
             }
            
         }

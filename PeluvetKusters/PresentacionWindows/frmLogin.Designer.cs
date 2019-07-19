@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             // 
             // btnNuevoUsuario
             // 
+            this.btnNuevoUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoUsuario.BackgroundImage")));
+            this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoUsuario.Location = new System.Drawing.Point(109, 106);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(100, 23);
@@ -49,6 +52,8 @@
             // 
             // btnIngresar
             // 
+            this.btnIngresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresar.BackgroundImage")));
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Location = new System.Drawing.Point(28, 106);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
@@ -92,6 +97,8 @@
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.BackgroundImage")));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Location = new System.Drawing.Point(28, 135);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(181, 23);
@@ -104,6 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(240, 178);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnNuevoUsuario);

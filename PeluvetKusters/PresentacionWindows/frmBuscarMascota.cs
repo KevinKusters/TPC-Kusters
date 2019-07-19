@@ -51,6 +51,7 @@ namespace PresentacionWindows
             turnos.txtapellidomasc.Text = animal.apellido;
             turnos.txtraza.Text = animal.raza.nombre;
             turnos.txtEspecie.Text = animal.especie;
+            this.Close();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

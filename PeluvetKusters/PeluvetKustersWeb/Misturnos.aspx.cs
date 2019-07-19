@@ -17,6 +17,7 @@ namespace PeluvetKustersWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             cargarGrilla();
+            dgvTurnos.Font.Size = 15;
         }
 
         private void cargarGrilla()
@@ -33,10 +34,7 @@ namespace PeluvetKustersWeb
 
             listalocalturnos = negocio.listarTurnosXclienteWEB(cliente.id);
             dgvTurnos.DataSource = listalocalturnos;       
-            dgvTurnos.DataBind();
-            
-            
-
+            dgvTurnos.DataBind();            
         }
 
         protected void dgvTurnos_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -50,6 +48,15 @@ namespace PeluvetKustersWeb
         protected void btnHome_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
+        }
+
+        protected void dgvTurnos_SelectedIndexChanged(object sender, EventArgs e)
+        {           
+        }
+
+        protected void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Miperfil.aspx");
         }
     }
 }

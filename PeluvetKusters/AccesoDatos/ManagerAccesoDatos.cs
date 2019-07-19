@@ -11,7 +11,7 @@ namespace AccesoDatos
     {   
         //poner server...
 
-        public static string cadenaConexion = "server= ; database=Kusters_DB; integrated security = true";
+        public static string cadenaConexion = "server=CLARIS ; database=peluvet; integrated security = true";
         private SqlCommand comando;
         private SqlConnection conexion;
         private SqlDataReader lector;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarMascota));
             this.lblOtro = new System.Windows.Forms.Label();
             this.txtOtro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -150,7 +151,9 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelar.Location = new System.Drawing.Point(144, 282);
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(144, 269);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 23);
             this.btnCancelar.TabIndex = 88;
@@ -226,9 +229,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMascotas.Location = new System.Drawing.Point(264, 25);
+            this.dgvMascotas.Location = new System.Drawing.Point(264, 31);
             this.dgvMascotas.Name = "dgvMascotas";
-            this.dgvMascotas.Size = new System.Drawing.Size(428, 461);
+            this.dgvMascotas.Size = new System.Drawing.Size(463, 448);
             this.dgvMascotas.TabIndex = 101;
             // 
             // lblMascotas
@@ -262,7 +265,9 @@
             // btnAgregarMascota
             // 
             this.btnAgregarMascota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAgregarMascota.Location = new System.Drawing.Point(38, 282);
+            this.btnAgregarMascota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMascota.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarMascota.Image")));
+            this.btnAgregarMascota.Location = new System.Drawing.Point(38, 269);
             this.btnAgregarMascota.Name = "btnAgregarMascota";
             this.btnAgregarMascota.Size = new System.Drawing.Size(100, 23);
             this.btnAgregarMascota.TabIndex = 106;
@@ -283,7 +288,9 @@
             // btnAceptarMod
             // 
             this.btnAceptarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAceptarMod.Location = new System.Drawing.Point(35, 498);
+            this.btnAceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptarMod.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptarMod.Image")));
+            this.btnAceptarMod.Location = new System.Drawing.Point(35, 485);
             this.btnAceptarMod.Name = "btnAceptarMod";
             this.btnAceptarMod.Size = new System.Drawing.Size(100, 23);
             this.btnAceptarMod.TabIndex = 119;
@@ -372,7 +379,9 @@
             // btnCancelarMod
             // 
             this.btnCancelarMod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelarMod.Location = new System.Drawing.Point(141, 498);
+            this.btnCancelarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarMod.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarMod.Image")));
+            this.btnCancelarMod.Location = new System.Drawing.Point(141, 485);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(103, 23);
             this.btnCancelarMod.TabIndex = 110;
@@ -400,7 +409,9 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(264, 498);
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.Location = new System.Drawing.Point(299, 485);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(103, 23);
             this.btnModificar.TabIndex = 120;
@@ -411,7 +422,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(373, 498);
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(408, 485);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 23);
             this.btnEliminar.TabIndex = 121;
@@ -441,7 +454,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 539);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(741, 526);
             this.Controls.Add(this.txtIdMod);
             this.Controls.Add(this.lblIDMod);
             this.Controls.Add(this.btnEliminar);

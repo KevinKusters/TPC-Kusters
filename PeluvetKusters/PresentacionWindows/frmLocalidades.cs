@@ -44,6 +44,7 @@ namespace PresentacionWindows
                 negocio.AgregarLocalidad(nueva);
                 
                 cargar_grilla();
+                txtNombreLoc.Text = "";
             }
         }
 

@@ -75,6 +75,10 @@ namespace PresentacionWindows
 
             negocio.CargarEmpleado(empleado);
             cargarGrilla();
+
+            txtApellidoAgr.Text = "";
+            txtNombreAgr.Text = "";
+            txtContactoAgr.Text = "";
             
         }
 

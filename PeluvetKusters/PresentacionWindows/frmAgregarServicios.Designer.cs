@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarServicios));
             this.dgvServicios = new System.Windows.Forms.DataGridView();
             this.lblNombreAlta = new System.Windows.Forms.Label();
             this.lblPrecioAlta = new System.Windows.Forms.Label();
@@ -169,6 +170,8 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Location = new System.Drawing.Point(33, 181);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
@@ -179,6 +182,8 @@
             // 
             // btnAceptarMod
             // 
+            this.btnAceptarMod.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptarMod.BackgroundImage")));
+            this.btnAceptarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarMod.Location = new System.Drawing.Point(33, 414);
             this.btnAceptarMod.Name = "btnAceptarMod";
             this.btnAceptarMod.Size = new System.Drawing.Size(75, 23);
@@ -189,6 +194,8 @@
             // 
             // btnCancelarMod
             // 
+            this.btnCancelarMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarMod.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarMod.Image")));
             this.btnCancelarMod.Location = new System.Drawing.Point(115, 414);
             this.btnCancelarMod.Name = "btnCancelarMod";
             this.btnCancelarMod.Size = new System.Drawing.Size(75, 23);
@@ -199,6 +206,8 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.Location = new System.Drawing.Point(205, 414);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
@@ -209,6 +218,8 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(286, 414);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
@@ -224,7 +235,6 @@
             this.rdbPeluqueria.Name = "rdbPeluqueria";
             this.rdbPeluqueria.Size = new System.Drawing.Size(75, 17);
             this.rdbPeluqueria.TabIndex = 20;
-            this.rdbPeluqueria.TabStop = true;
             this.rdbPeluqueria.Text = "Peluqueria";
             this.rdbPeluqueria.UseVisualStyleBackColor = true;
             // 
@@ -235,7 +245,6 @@
             this.rdbVeterinaria.Name = "rdbVeterinaria";
             this.rdbVeterinaria.Size = new System.Drawing.Size(75, 17);
             this.rdbVeterinaria.TabIndex = 21;
-            this.rdbVeterinaria.TabStop = true;
             this.rdbVeterinaria.Text = "Veterinaria";
             this.rdbVeterinaria.UseVisualStyleBackColor = true;
             // 
@@ -256,13 +265,13 @@
             this.rdbVeterinariaMod.Name = "rdbVeterinariaMod";
             this.rdbVeterinariaMod.Size = new System.Drawing.Size(75, 17);
             this.rdbVeterinariaMod.TabIndex = 24;
-            this.rdbVeterinariaMod.TabStop = true;
             this.rdbVeterinariaMod.Text = "Veterinaria";
             this.rdbVeterinariaMod.UseVisualStyleBackColor = true;
             // 
             // rdbPeluqueriaMod
             // 
             this.rdbPeluqueriaMod.AutoSize = true;
+            this.rdbPeluqueriaMod.Checked = true;
             this.rdbPeluqueriaMod.Enabled = false;
             this.rdbPeluqueriaMod.Location = new System.Drawing.Point(87, 356);
             this.rdbPeluqueriaMod.Name = "rdbPeluqueriaMod";
@@ -285,6 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(458, 462);
             this.Controls.Add(this.lblRubroMod);
             this.Controls.Add(this.rdbVeterinariaMod);

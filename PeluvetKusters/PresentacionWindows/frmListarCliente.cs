@@ -99,7 +99,8 @@ namespace PresentacionWindows
             
             turnos.txtIDcliente.Text = cliente.id.ToString();
             turnos.txtnombrecli.Text = cliente.nombre;
-            turnos.txtapellidocli.Text = cliente.apellido;                 
+            turnos.txtapellidocli.Text = cliente.apellido;
+            this.Close();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

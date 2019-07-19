@@ -38,7 +38,7 @@
      </p>
     <p></p>
     <p>
-        <asp:Button ID="btnAceptar" runat="server" Text="Pedir turno" OnClick="btnAceptar_Click" UseSubmitBehavior="False"></asp:Button>
+        <asp:Button CssClass="btn btn-primary btn-lg" ID="btnAceptar" runat="server" Text="Pedir turno" OnClick="btnAceptar_Click" UseSubmitBehavior="False"></asp:Button>
     </p>
    
 </table> </center>

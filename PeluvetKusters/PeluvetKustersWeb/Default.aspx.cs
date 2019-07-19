@@ -21,11 +21,23 @@ namespace PeluvetKustersWeb
             {
                 btnPerfil.Visible = true;
                 btnPedirTurno.Enabled = true;
+                lblUsuario.Visible = false;
+                lblContraseña.Visible = false;
+                btnLogin.Visible = false;
+                btnRegistrarse.Visible = false;
+                txtNombreUsuario.Visible = false;
+                TxtContraseña.Visible = false;
             }
             else
             {
                 btnPerfil.Visible = false;
                 btnPedirTurno.Enabled = false;
+                lblUsuario.Visible =true;
+                lblContraseña.Visible = true;
+                btnLogin.Visible = true;
+                btnRegistrarse.Visible = true;
+                txtNombreUsuario.Visible = true;
+                TxtContraseña.Visible = true;
             }
         }     
 
@@ -67,7 +79,13 @@ namespace PeluvetKustersWeb
             {
                 Response.Write("<script>window.alert('Logeado!');</script>");
                 btnPerfil.Visible = true;
-                
+                lblUsuario.Visible = false;
+                lblContraseña.Visible = false;
+                btnLogin.Visible = false;
+                btnRegistrarse.Visible = false;
+                txtNombreUsuario.Visible = false;
+                TxtContraseña.Visible = false;
+
                 int id;
                 id = usuario.id;
                 Session["variable_sesion"] = id;
@@ -77,7 +95,7 @@ namespace PeluvetKustersWeb
             {
                 Response.Write("<script>window.alert('Usuario o contraseña incorrectos');</script>");
             }
-
+          
         }
 
         protected void txtNombreUsuario_TextChanged(object sender, EventArgs e)
@@ -87,7 +105,12 @@ namespace PeluvetKustersWeb
 
         protected void btnPerfil_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Misturnos.aspx");
+            Response.Redirect("Miperfil.aspx");
+        }
+
+        protected void txtNombreUsuario_TextChanged1(object sender, EventArgs e)
+        {
+
         }
     }
 }

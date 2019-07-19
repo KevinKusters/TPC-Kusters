@@ -55,21 +55,17 @@ namespace PresentacionWindows
             }
             else
             {
-                try
-                {
-                    Raza agregar = new Raza();
-                    RazaNegocio agregarnuevo = new RazaNegocio();
+             
+               Raza agregar = new Raza();
+               RazaNegocio agregarnuevo = new RazaNegocio();
 
-                    agregar.nombre = txtNombreAgr.Text;
-                    agregar.estado = true;
-                    agregarnuevo.AgregarRaza(agregar);
+               agregar.nombre = txtNombreAgr.Text;
+               agregar.estado = true;
+               agregarnuevo.AgregarRaza(agregar);
                    
-                    cargarGrilla();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }                
+               cargarGrilla();
+               txtNombreAgr.Text = "";
+                       
             }
         }      
 

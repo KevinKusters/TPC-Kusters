@@ -4,43 +4,53 @@
         <div class ="row">
              <div class ="col-md-3">
                  <table style="width:100%;">
+                    
                      <tr>
-                         <td style="width: 154px">
+                         <td style="width: 90px">
 
                              &nbsp;</td>
+                         <td style="width: 139px">
+
+                             <asp:Button  CssClass ="btn btn-primary btn-sm" ID="btnPerfil" runat="server" Text="Mis perfil" OnClick="btnPerfil_Click" Visible="False" Width="142px" Height="45px" />
+
+                             </td>
                          <td>
 
-                             &nbsp;</td>
-                         <td>
                              &nbsp;</td>
                      </tr>
                      <tr>
-                         <td style="width: 154px; height: 35px;">   <h3 aria-haspopup="False">&nbsp;&nbsp; Usuario:</h3></td>
-                         <td style="height: 35px; width: 267px">
-
-                             <asp:Button ID="btnPerfil" runat="server" Text="Mis turnos" OnClick="btnPerfil_Click" Visible="False" Width="200px" />
-
-                             <asp:TextBox ID="txtNombreUsuario" runat="server" Width="198px"></asp:TextBox>
+                         <td style="width: 90px; height: 35px;">   <h3 aria-haspopup="False">
+                             &nbsp;</h3></td>
+                         <td style="height: 35px; width: 139px">
+                             <h3>
+                             <asp:Label ID="lblUsuario" runat="server" Text="Usuario:"></asp:Label>
+                            </h3>
                          </td>
                          <td style="height: 35px">
-                             &nbsp;</td>
+
+                             <asp:TextBox ID="txtNombreUsuario" runat="server" Width="198px" OnTextChanged="txtNombreUsuario_TextChanged1"></asp:TextBox>
+                         </td>
                      </tr>
                      <tr>
-                         <td style="width: 154px">   <h3>&nbsp;&nbsp;Contraseña: </h3></td>
-                         <td style="width: 267px">
-                             <asp:TextBox ID="TxtContraseña" runat="server" Width="199px" TextMode="Password"></asp:TextBox>
+                         <td style="width: 90px">   <h3>&nbsp;</h3></td>
+                         <td style="width: 139px">
+                             <h3>
+                             <asp:Label ID="lblContraseña" runat="server" Text="Contraseña:"></asp:Label>
+                             </h3>
                          </td>
                          <td>
+                             <asp:TextBox ID="TxtContraseña" runat="server" Width="199px" TextMode="Password"></asp:TextBox>
                          </td>
                      </tr>
                      <tr>
-                         <td style="width: 154px">&nbsp;</td>
-                         <td style="width: 267px">
+                         <td style="width: 90px">&nbsp;</td>
+                         <td style="width: 139px">
+                             &nbsp;</td>
+                         <td>
                              <asp:Button CssClass ="btn btn-primary btn-sm" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Onclick" />
                               <asp:Button CssClass ="btn btn-primary btn-sm" ID="btnRegistrarse" runat="server" Text="Registrarse" OnClick="brnRegistrarse_Click" />
 
                          </td>
-                         <td>&nbsp;</td>
                      </tr>
                  </table>
              </div>

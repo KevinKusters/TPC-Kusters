@@ -16,16 +16,18 @@
                <tr>
                    <td>&nbsp;</td>
                    <td style="width: 173px">
-            <asp:GridView ID="dgvTurnos" runat="server" BackColor="White" BorderColor="#003300" OnRowDataBound="dgvTurnos_RowDataBound"></asp:GridView>
+            <asp:GridView  CssClass= "table table-striped table-bordered table-condensed" ID="dgvTurnos" runat="server" BackColor="White" BorderColor="#003300" OnRowDataBound="dgvTurnos_RowDataBound" BorderStyle="Solid" OnSelectedIndexChanged="dgvTurnos_SelectedIndexChanged"></asp:GridView>
                    </td>
                    <td>&nbsp;</td>
                </tr>
                <tr>
-                   <td style="height: 58px"></td>
+                   <td style="height: 58px">&nbsp;</td>
                    <td style="width: 173px; height: 58px;">
-                       <asp:Button ID="btnHome" runat="server" OnClick="btnHome_Click" Text="Home" Width="184px" />
+                       <asp:Button CssClass="btn btn-primary btn-lg"  ID="btnHome" runat="server" OnClick="btnHome_Click" Text="Home" Width="184px" />
+                       <asp:Button  CssClass="btn btn-primary btn-lg" ID="btnPerfil" runat="server" Text="Mi perfil" OnClick="btnPerfil_Click" />
                    </td>
-                   <td style="height: 58px"></td>
+                   <td style="height: 58px">
+                       &nbsp;</td>
                </tr>
            </table>
        </p>
